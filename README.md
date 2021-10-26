@@ -1,4 +1,6 @@
 # Intended to contain files related to SSL Course Project
+VaxiNO'Pandemic is a portal to enable faster management of the ongoing vaccination drive.
+We intend to make it efficient, user-friendly, and informative.
 
 ## Work In Progress!!!
 ![Logo Image](/images/dark_logo.png)
