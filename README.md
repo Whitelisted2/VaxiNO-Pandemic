@@ -2,6 +2,14 @@
 
 ## Work In Progress!!!
 
-edit123
+## Technologies used:
+- LaTeX/*Beamer
+- HTML/CSS
+- *Javascript
+- PHP
+- SQL
+- Git
+- *Python
+[* To be implemented]
 
-I am finally here
+link to webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ 
