@@ -1,0 +1,29 @@
+.logo-box {
+    background-color:crimson;
+    color: darkblue;
+    height: 200px;
+    width: 300px;
+
+    margin: 200px auto;
+    padding: 20px;
+
+    border: orange dotted 10px;
+}
+
+.orange-border {
+    border: orange dotted;
+    height: 100%;
+    width: 100%;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: background 2s, transform 2s;
+}
+  
+div:hover {
+    background: blue;
+    transform: rotate(180deg);
+}

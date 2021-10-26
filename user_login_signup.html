@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+
+/* general css for the body */
+body{
+	color:#636888;
+	background:#c3c3c9;
+	font:600 14px/18px 'Open Sans',sans-serif;
+}
+
+.flex-container{
+	display: flex;
+	justify-content: center;
+}
+
+/* sets box sizing across all elements */
+*, *:after, *:before{
+    box-sizing: border-box;
+}
+
+.login-wrap{
+	width: 100%;
+	margin: auto;
+	max-width: 525px;
+	min-height: 670px;
+	position: relative;
+	box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.login-html{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 30px 70px 50px 70px;
+	background: rgba(1, 3, 7, 0.9);
+}
+
+.login-html .log-in-htm,
+.login-html .sign-up-htm{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: all .4s linear;
+}
+
+.login-html .log-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display: none;
+}
+
+.login-html .tab{
+	font-size: 22px;
+	margin-right: 15px;
+	padding-bottom: 5px;
+	margin: 0 15px 10px 0;
+	display: inline-block;
+	border-bottom: 2px solid transparent;
+}
+
+.login-html .log-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#05c2fc;
+}
+
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+
+.login-form .group{
+	margin-bottom: 10px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width: 100%;
+	color: #fff;
+	display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button{
+	border: none;
+	padding: 15px 20px;
+	border-radius: 25px;
+	background: rgba(255,255,255,.1);
+}
+
+.login-form .group input[data-type="password"]{
+	-webkit-text-security: circle;
+}
+
+.login-form .group .label{
+	color: #aaa;
+	font-size: 12px;
+}
+
+.login-form .group .button{
+	background: #1161ee;
+}
+
+.login-html .log-in:checked + .tab + .sign-up + .tab + .login-form .log-in-htm{
+	transform: rotate(0);
+}
+
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform: rotate(0);
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+}
+
+</style>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+			<div class="flex-container">
+				<a href="mainpage.html"><img src="images/logo.jpeg" width=350px onclick="gotohome()"></a>
+			</div>
+			<hr><br>
+            <input id="tab-1" type="radio" name="tab" class="log-in" checked><label for="tab-1" class="tab">LOG IN</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">SIGN UP</label>
+            <div class="login-form">
+                <div class="log-in-htm">
+					<form action="login.php" method="POST">
+                    <div class="group">
+                        <label for="phnum" class="label">PHONE NUMBER</label>
+                        <input id="phnum" name="phnum" type="number" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">PASSWORD</label>
+                        <input id="pass" name="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="SIGN IN">
+                    </div>
+					</form>
+                </div>
+                <div class="sign-up-htm">
+					<form action="signup.php" method="POST">
+					<div class="group">
+                        <label for="name" class="label">FULL NAME</label>
+                        <input id="name" name="name" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="phnum" class="label">PHONE NUMBER</label>
+                        <input id="phnum" name="phnum" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">PASSWORD</label>
+                        <input id="pass" name="pass" type="password" class="input" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="reppass" class="label">REPEAT PASSWORD</label>
+                        <input id="reppass" name="repass" type="password" class="input" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="email" class="label">EMAIL ADDRESS</label>
+                        <input id="email" name="email" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="pincode" class="label">PINCODE</label>
+                        <input id="pincode" name="pincode" type="number" class="input" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="SIGN UP">
+                    </div>
+					</form>
+                </div>
+            </div>
+        </div>
+    </div>
+	<footer>
+		Click on the logo to navigate back to the home page!
+	</footer>
+</body>
+</html>

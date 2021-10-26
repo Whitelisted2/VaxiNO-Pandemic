@@ -1,0 +1,58 @@
+/**************NAVIGATION BAR CSS******************/
+.navbar {
+    background-color: black;
+    display: block;
+    height: 20px;
+    left: 0;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition:cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    width: 100%;
+}
+
+.nav-list {
+    color: cyan;
+    list-style-type: none;
+    margin: 0 10px;
+    max-width: 90%;
+    overflow: hidden;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navbar a.nav-list:hover {
+    color: chartreuse;
+}
+
+.nav-list__Home {
+    left: 50px;
+    margin-left: 0px;
+    position: absolute;
+}
+
+.nav-list__Administrator {
+    left: 125px;
+    position: absolute;
+}
+
+.nav-list__Vaccinator {
+    left: 250px;
+    position: absolute;
+}
+
+.nav-list__Login {
+    right: 100px;
+    position: absolute;
+}
+
+.nav-list__image {
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(0, 60, 128));
+    height: 40px;
+    right: 150px;
+    position: absolute;
+    top: 10px;
+    width: 40px;
+}
+
