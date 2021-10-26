@@ -10,6 +10,7 @@
 - SQL
 - Git
 - \*Python
+
 [\* To be implemented]
 
 link to webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ 
