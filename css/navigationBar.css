@@ -39,14 +39,9 @@ span {
 }
 
 .nav-logo {
-    
     height: 40px;
     width: auto;
 }
-
-.nav-list__Login {
-    margin-top: 10px;
-} 
 
 .nav-list__image {
     background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(0, 60, 128));
