@@ -14,6 +14,64 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+
+        <style>
+            .main {
+                margin-top: 60px;
+            }
+            .container {
+                background-color: #E3FDFD;
+                display: block;
+                left: 0;
+                width: 100%;
+            }
+            .circular {
+                border-radius: 10%;
+            }
+            .top-container {
+                background-image: url('https://media1.giphy.com/media/26BRyql7J3iOx875u/giphy.webp'), linear-gradient( rgb(0, 60, 128), rgb(0, 255, 242));
+                height: auto;
+                padding: 50px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .bottom-container {
+                background: rgb(0, 60, 128);
+                padding: 50px;
+            }
+            .awareness {
+                display: block;
+                /* font-style: ; */
+                margin: 0 auto;
+                padding: 25px;
+                text-align: left;
+                width: 43%;
+            }
+            .float-left-img {
+                background-color: #00fff240;
+                float: left;
+                margin-right: 15px;
+                width: 100px;
+
+                transition: background 2s, transform 2s;
+            }
+            .awareness:hover  .float-left-img {
+                background: blue;
+                transform: rotate(360deg);
+            }
+            .float-right-img {
+                background-color: #00fff240;
+                float: right;
+                margin-left: 15px;
+                width: 100px;
+
+                transition: background 2s, transform 2s;
+            }
+            .awareness:hover .float-right-img{
+                background: blue;
+                transform: rotate(360deg);
+            }
+        </style>
     </head>
     
     <body>

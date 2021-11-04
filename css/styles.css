@@ -78,42 +78,7 @@ p {
     color: darkgray;
 }
 
-.awareness {
-    display: block;
-    /* font-style: ; */
-    margin: 0 auto;
-    padding: 25px;
-    text-align: left;
-    width: 43%;
-}
 
-.float-left-img {
-    background-color: #00fff240;
-    float: left;
-    margin-right: 15px;
-    width: 100px;
-
-    transition: background 2s, transform 2s;
-}
-
-.awareness:hover  .float-left-img {
-    background: blue;
-    transform: rotate(360deg);
-}
-
-.float-right-img {
-    background-color: #00fff240;
-    float: right;
-    margin-left: 15px;
-    width: 100px;
-
-    transition: background 2s, transform 2s;
-}
-
-.awareness:hover .float-right-img{
-    background: blue;
-    transform: rotate(360deg);
-}
 
 /*******************Footer Section*************************/
 .bottom-container {
