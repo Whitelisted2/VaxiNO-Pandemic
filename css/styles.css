@@ -63,12 +63,11 @@ a {
 }
 
 .new {
-    background-color: blueviolet;
-    background: url('https://media1.giphy.com/media/26BRyql7J3iOx875u/giphy.webp'),  url('../images/dark_logo.png') no-repeat;
+    background: black url('https://media1.giphy.com/media/26BRyql7J3iOx875u/giphy.webp');
     display: block;
-    height: 210px;
+    height: auto;
     padding: 20px;
-    width: 100%;
+    /* width: 100%; */
     /* background-clip: padding-box; 
     background-origin: content-box;
     background-size: cover;
