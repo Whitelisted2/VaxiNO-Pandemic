@@ -13,16 +13,21 @@ h1 {
 
 h3 {
     color: #E80484;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 10px auto;
+}
+
+p {
+    margin: 0;
+    line-height: 2;
+}
+
+a {
+    color: aqua;
+    text-decoration: none;
 }
 
 #h3-logo {
     color: cornsilk;
-}
-
-p {
-    line-height: 2;
 }
 
 
@@ -95,6 +100,17 @@ p {
 /*******************Footer Section*************************/
 .bottom-container {
     background: rgb(0, 60, 128);
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    justify-content: space-around;
     padding: 50px;
+    text-align: center;
 }
-
+.profile-box {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
