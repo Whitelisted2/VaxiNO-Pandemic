@@ -16,6 +16,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
 
         <style>
+            h3 {
+                margin: 10px auto;
+            }
+            p {
+                margin: 0;
+            }
+            a {
+                color: aqua;
+                text-decoration: none;
+            }
+            img {
+                border-radius: 100%;
+                height: 100px;
+                width: 100px;
+            }
             .main {
                 margin-top: 60px;
             }
@@ -34,10 +49,6 @@
                 padding: 50px;
                 text-align: left;
                 text-transform: uppercase;
-            }
-            .bottom-container {
-                background: rgb(0, 60, 128);
-                padding: 50px;
             }
             .awareness {
                 display: block;
@@ -70,6 +81,22 @@
             .awareness:hover .float-right-img{
                 background: blue;
                 transform: rotate(360deg);
+            }
+            .bottom-container {
+                background: rgb(0, 60, 128);
+                display: flex;
+                flex-direction: row;
+                font-family: sans-serif;
+                justify-content: space-around;
+                padding: 50px;
+                text-align: center;
+            }
+            .profile-box {
+                color: aliceblue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 30px;
             }
         </style>
     </head>
@@ -129,7 +156,30 @@
             <!--BOTTOM CONTAINER (FOOTER)-->
             <div class="container">
                 <div class="bottom-container">
-                    <h1>Hello! HOW ARE YOU?</h1>
+                    <div class="profile-box">
+                        <div><img src="images/sid.jfif" alt="Siddharth's Image"></div>
+                        <br>
+                        <h2>B Siddharth Prabhu</h2>
+                        <h3>200010003</h3>
+                        <a href="mailto:200010003@iitdh.ac.in">200010003@iitdh.ac.in</a>
+                    </div>
+                    <div class="profile-box">
+                        <div><img src="images/ishi.png" alt="Ishika's Image"></div>
+                        <br>
+                        <h2>Ishika Sharma</h2>
+                        <h3>200010020</h3>
+                        <a href="mailto:200010020@iitdh.ac.in">200010020@iitdh.ac.in</a>
+                    </div>
+                    <div class="profile-box">
+                        <div><img src="images/nirmit.jpeg" alt="Nirmit's Image"></div>
+                        <br>
+                        <h2>Nirmit Arora</h2>
+                        <h3>200010034</h3>
+                        <a href="mailto:200010034@iitdh.ac.in">200010034@iitdh.ac.in</a>
+                    </div>
+                </div>
+                <div class="box3">
+                    <p>&copy;vaxiNO'pandemic (A step towards faster vaccination)</p>
                 </div>
             </div>
 
