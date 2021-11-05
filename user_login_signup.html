@@ -3,18 +3,35 @@
 <head>
 <title>Index</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
 <style>
-
+h1{
+	font-family: 'Merriweather', serif;
+}
 /* general css for the body */
 body{
 	color:#636888;
 	background:#c3c3c9;
+	background-image: url(images/loginbg.jpg);
 	font:600 14px/18px 'Open Sans',sans-serif;
 }
 
+/*container for logo*/
 .flex-container{
 	display: flex;
 	justify-content: center;
+}
+
+/*Image opacity changes on hovering*/
+img{
+	opacity:1;
+}
+img:hover{
+	cursor: pointer;
+	opacity: 0.5;
+	transform: skewX(-5deg);
 }
 
 /* sets box sizing across all elements */
@@ -25,10 +42,11 @@ body{
 .login-wrap{
 	width: 100%;
 	margin: auto;
-	max-width: 525px;
-	min-height: 670px;
+	max-width: 520px;
+	min-height: 700px;
 	position: relative;
-	box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+	left: 20%;
+	box-shadow: 0 5px 5px 0 rgba(42, 68, 124, 0.658), 0 5px 15px 5px rgba(63, 170, 170, 0.651);
 }
 
 .login-html{
@@ -36,7 +54,7 @@ body{
 	height: 100%;
 	position: absolute;
 	padding: 30px 70px 50px 70px;
-	background: rgba(1, 3, 7, 0.9);
+	background: rgba(1, 2, 5, 0.9);
 }
 
 .login-html .log-in-htm,
@@ -48,35 +66,44 @@ body{
 	position: absolute;
 	transform: rotateY(180deg);
 	backface-visibility: hidden;
-	transition: all .4s linear;
+	transition: all .5s linear;
 }
 
+/*Disguising the radio buttons*/
 .login-html .log-in,
 .login-html .sign-up,
 .login-form .group .check{
 	display: none;
 }
 
+/*the radio options*/
 .login-html .tab{
-	font-size: 22px;
+	font-size: 23px;
 	margin-right: 15px;
 	padding-bottom: 5px;
 	margin: 0 15px 10px 0;
 	display: inline-block;
-	border-bottom: 2px solid transparent;
+	border-bottom: 3px solid transparent;
+}
+.login-html .tab:hover{
+	color: rgb(64, 63, 114);
+	cursor: pointer;
 }
 
 .login-html .log-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-	color:#fff;
-	border-color:#05c2fc;
+	color: white;
+	border-color: #05c2fc;
+}
+
+.login-html .log-in:not(:checked),
+.login-html .sign-up:not(:checked){
+	color: rgb(100, 208, 223);
 }
 
 .login-form{
-	min-height:345px;
-	position:relative;
-	perspective:1000px;
-	transform-style:preserve-3d;
+	perspective: 1000px;
+	transform-style: preserve-3d;
 }
 
 .login-form .group{
@@ -84,23 +111,37 @@ body{
 }
 
 .login-form .group .label,
-.login-form .group .input,
-.login-form .group .button{
+.login-form .group .input{
 	width: 100%;
-	color: #fff;
 	display: block;
 }
+.login-form .group .button{
+	width: 100%;
+	display: block;
+	color: honeydew;
+}
 
+/*for the input regions*/
 .login-form .group .input,
 .login-form .group .button{
 	border: none;
 	padding: 15px 20px;
+	color:ivory;
 	border-radius: 25px;
-	background: rgba(255,255,255,.1);
+	background: rgba(255,255,255,0.1);
 }
 
+.login-form .group .input:hover{
+	background: rgb(55, 99, 122);
+	cursor: pointer;
+}
+.login-form .group .input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+
+}
 .login-form .group input[data-type="password"]{
 	-webkit-text-security: circle;
+	-moz-text-security: circle;
 }
 
 .login-form .group .label{
@@ -111,23 +152,52 @@ body{
 .login-form .group .button{
 	background: #1161ee;
 }
+.login-form .group .button:hover{
+	background: #6bc1e9;
+	cursor: pointer;
+}
 
 .login-html .log-in:checked + .tab + .sign-up + .tab + .login-form .log-in-htm{
 	transform: rotate(0);
 }
-
 .login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
 	transform: rotate(0);
 }
 
-footer {
-  text-align: center;
-  padding: 3px;
+footer{
+	text-align: center;
+	padding: 2px;
+	color:cornsilk;
 }
-
+.footer-copy{
+	background-color: darkblue;
+	z-index:1;
+}
+.left-hand-side{
+	width: 100%;
+	color:ivory;
+	float: left;
+	left: 20%;
+	max-width: 300px;
+	min-height: 700px;
+	position: relative;
+	box-shadow: 0 5px 5px 0 rgba(124, 42, 120, 0.658), 0 5px 15px 5px rgba(149, 63, 170, 0.651);
+}
+.left-content{
+	height:100%;
+	width:100%;
+	padding: 30px 70px 20px 25px;
+	background-color: rgb(82, 43, 172);
+}
 </style>
 </head>
 <body>
+	<div class="left-hand-side">
+		<div class="left-content">
+			<h1> Welcome! </h1>
+			Contact us:
+		</div>
+	</div>
     <div class="login-wrap">
         <div class="login-html">
 			<div class="flex-container">
@@ -186,8 +256,15 @@ footer {
             </div>
         </div>
     </div>
+	<br>
+	<br>
 	<footer>
 		Click on the logo to navigate back to the home page!
+	</footer>
+	<footer>
+		<div class="footer-copy">
+		&copy; 2021 VaxiNO'Pandemic
+		</div>
 	</footer>
 </body>
 </html>
