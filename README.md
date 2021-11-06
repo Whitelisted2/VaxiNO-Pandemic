@@ -8,11 +8,11 @@ We intend to make it efficient, user-friendly, and informative.
 ## Technologies used:
 - LaTeX/\*Beamer
 - HTML/CSS
-- \*Javascript
+- Javascript
 - PHP
 - SQL
 - Git
-- \*Python
+- Python
 
 [\* To be implemented]
 
