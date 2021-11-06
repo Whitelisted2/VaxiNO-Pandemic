@@ -20,7 +20,7 @@ if(!isset($_SESSION["login"]))
     <body>
         <div class="top" height="40px">
             <div id="heading">Profile Page</div>
-            <div id="personal-header" width="20%" style="font-size: 50%;">Hi! &lt;NAME&gt;! <img src="" width="20px" height="20px">&nbsp;&nbsp;&nbsp;&nbsp;<button value="Log-out">Log-out</button></div>
+            <div id="personal-header" width="20%" style="font-size: 50%;">Hi! &lt;NAME&gt;! <img src="" width="20px" height="20px">&nbsp;&nbsp;&nbsp;&nbsp;<form action="logging_out.php"><button value="Log-out">Log-out</button></form></div>
         </div>
         <br/>
         <div class="main">
