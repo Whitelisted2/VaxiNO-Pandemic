@@ -44,7 +44,7 @@ session_start()
         $_SESSION["email_user"]=$row["email_user"];
         $_SESSION["pincode_users"]=$row["pincode_users"];
         echo "You are Logged in !<br/>";
-        echo '<a href="loggedin.html">Click here</a> to go to your dashboard to book a vaccine slot !';
+        echo '<a href="loggedin.php">Click here</a> to go to your dashboard to book a vaccine slot !';
     }
     else{
         // invalid credentials

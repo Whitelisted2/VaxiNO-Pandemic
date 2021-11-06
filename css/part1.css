@@ -1,0 +1,65 @@
+body{
+    background-color: #216de9;
+    color: #D6D1C9;
+}
+
+.top{
+    float:inline-start;
+    font-size: 200%;
+}
+#heading{
+    float: left;
+    width: 80%;
+}
+#personal-header{
+    float: right;
+    width: 20%;
+    text-align: right;
+}
+
+
+.left{
+    background-color: #2b2936;
+    color: #D4D6C9;
+    float: left;
+    width: 80%;
+}
+#name{
+    float: left;
+    height: 50%;
+    width: 50%;
+}
+#age{
+    float: left;
+    height: 50%;
+    width: 50%
+}
+#ref-no{
+    float: right;
+    height: 50%;
+    width: 50%
+}
+#approved{
+    float: right;
+    height: 50%;
+    width: 50%
+}
+
+
+
+.right{
+    background-color: #293436;
+    color: #D6CBC9;
+    float: right;
+    width: 20%;
+}
+.vacc-stat{
+    text-align: center;
+}
+
+
+
+
+.footer{
+    margin-top: 5px;
+}
