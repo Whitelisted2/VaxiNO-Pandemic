@@ -189,6 +189,11 @@ footer{
 	padding: 30px 70px 20px 25px;
 	background-color: rgb(82, 43, 172);
 }
+.login-html h1{
+	font-family: 'Merriweather', serif;
+	color: ivory;
+	font-weight: 800;
+}
 </style>
 </head>
 <body>
@@ -204,9 +209,10 @@ footer{
 				<a href="index.html"><img src="images/logo.jpeg" width=350px onclick="gotohome()"></a>
 			</div>
 			<hr><br>
-            <input id="tab-1" type="radio" name="tab" class="log-in" checked><label for="tab-1" class="tab">LOG IN</label>
+			<center><h1> Administrator Log-In</h1></center>
+            <input id="tab-1" type="radio" name="tab" class="log-in" checked><label for="tab-1" class="tab"></label>
             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
-            <div class="login-form">
+			<div class="login-form">
                 <div class="log-in-htm">
 					<form action="admin_login.php" method="POST">
                     <div class="group">
@@ -221,7 +227,7 @@ footer{
                         <input type="submit" class="button" value="SIGN IN">
                     </div>
 					</form>
-                </div>
+                </div> 
                 <div class="sign-up-htm">
 					<form action="signup.php" method="POST">
 					<div class="group">

@@ -14,6 +14,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+        <script src="https://maps.mapmyindia.com/covid-places/showNearbyCovidPlacesOnMap.js"></script>
+        <style>
+            .map-in{
+                width:75%;
+                height:400px;
+            }
+            *.after{
+                box-sizing: border-box;
+            }
+        </style>
     </head>
     
     <body>
@@ -52,13 +62,19 @@
             </div>-->
 
             <!--MIDDLE CONTAINER (CONTENT)-->
-            <div class="new">
+            <!--<div class="new">
                 <iframe id="inlineFrameExample"
                     title="Inline Frame Example"
                     width="75%"
                     height="300"
                     src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
                 </iframe>
+            </div>-->
+            <div class="new">
+            <div class="map-in" id="nearby-covid-places-mapmyindia"></div>
+            <script type="text/javascript">
+                loadNearbyCovidCentresMapmyIndiaDiv(document.getElementById("nearby-covid-places-mapmyindia"));
+            </script>
             </div>
 
             <!--BOTTOM CONTAINER (FOOTER)-->
@@ -87,7 +103,7 @@
                     </div>
                 </div>
                 <div>
-                    <p>&copy;vaxiNO'pandemic (A step towards faster vaccination)</p>
+                    <p>&copy;VaxiNO'Pandemic (A step towards faster vaccination)</p>
                 </div>
             </div>
 
@@ -109,5 +125,4 @@
             </div>
         </div>
     </body>
-
 </html>
