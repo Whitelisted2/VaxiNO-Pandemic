@@ -30,7 +30,7 @@ session_start()
     $command = "use admins";
     $result = mysqli_query($conn, $command);
 
-    $id_admin=$_POST["adminid"];
+    $id_admin=$_POST["admin_id"];
     $password_admin=trim($_POST["pass"]);
 
     $command="CREATE TABLE IF NOT EXISTS admintable (
@@ -43,29 +43,23 @@ session_start()
         die("Table Not created ! error : ".mysqli_error($conn)."<br/>");
     }
 
-    $command = "INSERT INTO usertable values ('Nirmit', '200010034', '430010002')";
+    $command = "INSERT IGNORE INTO admintable values ('Nirmit', '200010034', '430010002')";
     $result = mysqli_query($conn, $command);
     if(!$result){
         die("Record Not added ! Please try again. error : ".mysqli_error($conn));
     }
 
-    $command = "INSERT INTO usertable values ('Ishika', '200010020', '020010002')";
+    $command = "INSERT IGNORE INTO admintable values ('Ishika', '200010020', '020010002')";
     $result = mysqli_query($conn, $command);
     if(!$result){
         die("Record Not added ! Please try again. error : ".mysqli_error($conn));
     }
 
-    $command = "INSERT INTO usertable values ('Siddharth', '200010003', '300010002')";
+    $command = "INSERT IGNORE INTO admintable values ('Siddharth', '200010003', '300010002')";
     $result = mysqli_query($conn, $command);
     if(!$result){
         die("Record Not added ! Please try again. error : ".mysqli_error($conn));
     }
-
-
-
-
-
-
 
     $command = "SELECT * FROM admintable WHERE id_admin='$id_admin'";
     $result = mysqli_query($conn, $command);
@@ -75,13 +69,16 @@ session_start()
         $_SESSION["login_admin"]=1;
         $_SESSION["name_admin"]=$row["name_admin"];
         $_SESSION["id_admin"]=$row["id_admin"];
-        echo "You are Logged in !<br/>";
-        echo '<a href="loggedin.html">Click here</a> to go to your dashboard to book a vaccine slot !';
+        echo $_SESSION["name_admin"]." is Logged in as an Administrator!<br/>";
+        echo 'Here you get Admin Privilages !';//<a href="loggedin.html">Click here</a>
     }
     else{
         // invalid credentials
         die("Please enter valid Ph. No. and password !");
     }
+
+    // header("location : admin_loggedin.html")
+    // please un-comment the adove line later
     ?>
 </body>
 </html>
