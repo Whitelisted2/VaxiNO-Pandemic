@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        
     <style>
         .left-col{
             width:42%;
@@ -31,6 +33,8 @@
             border-width: 3px;
             margin-left: 10%;
             margin-right: 10%;
+            box-shadow:rgb(255, 78, 255) 0 0 3px 3px;
+            -webkit-box-shadow: rgb(255, 78, 255) 0 0 3px 3px;
         }
         .row:after{
             box-sizing:border-box;
@@ -69,30 +73,28 @@
         }
 
         h1{
-            color:ivory;
+            color:aliceblue;
             font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        p,
+        blockquote{
+            color: rgb(128, 255, 78);
         }
 
         footer{
             background-color: rgb(233, 115, 115);
-            color:black
+            color:black;
+            font-family: 'Montserrat', sans-serif;
         }
-
-        .logoabc img{
-            opacity: 1;
-        }
-        .logoabc img:hover{
-            opacity: 0.5;
-            transform: skewX(-5deg);
-            cursor: pointer;
-        }
+        
     </style>
 </head>
 <body>
 
 <!--NAVIGATION BAR-->
 <div class="navbar">
-    <div class="logoabc">
+    <div class="logosmall">
         <a href="index.html">
             <img class="nav-logo" src="images/logo_short2.jpg" alt="dark_logo">
         </a>
@@ -152,21 +154,22 @@
         <img src="stat3.jpeg" width="90%">
     </div>
 </div>
-In the words of the creator of the API,
+<br>
+<p>In the words of the creator of the API,</p>
 <figure>
 <blockquote><i>
-I truly hope you will be able to build something amazing with this REST API. 
+"I truly hope you will be able to build something amazing with this REST API. 
 Even if it won't save the world from this COVID-19 pandemic, 
-I hope it will be a great source of motivation and training for your next pet project.
+I hope it will be a great source of motivation and training for your next pet project."
 </i></blockquote>
 <figcaption>
-&ndash;<a href="https://twitter.com/MBeugnet">M. Beugnet</a>
+&mdash; <a href="https://twitter.com/MBeugnet">M. Beugnet</a>
 </figcaption>
 </figure>
 <br>
 <br>
 <footer>
-    &copy; 2021 VaxiNO'Pandemic 
+    <p>&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)</p> 
 </footer>
 </body>
 </html>

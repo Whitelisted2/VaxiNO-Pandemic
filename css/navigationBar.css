@@ -12,6 +12,7 @@
     top: 0;
     transition:cubic-bezier(0.6, 0.04, 0.98, 0.335);
     width: 100%;
+    z-index: 10;
 }
 
 .cloumn-flexing {
@@ -32,6 +33,7 @@ span {
     max-width: 90%;
     padding: 0;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar a.nav-list:hover {
@@ -41,6 +43,14 @@ span {
 .nav-logo {
     height: 40px;
     width: auto;
+}
+.logosmall img{
+    opacity: 1;
+}
+.logosmall img:hover{
+    opacity: 0.5;
+    transform: skewX(-5deg);
+    cursor: pointer;
 }
 
 .nav-list__image {

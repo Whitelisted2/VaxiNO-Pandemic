@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
 <style>
 h1{
 	font-family: 'Merriweather', serif;
@@ -32,7 +36,7 @@ img{
 img:hover{
 	cursor: pointer;
 	opacity: 0.5;
-	transform: skewX(-5deg);
+	transform: skewX(-3deg);
 }
 
 /* sets box sizing across all elements */
@@ -44,7 +48,7 @@ img:hover{
 	width: 100%;
 	margin: auto;
 	max-width: 520px;
-	min-height: 700px;
+	min-height: 720px;
 	position: relative;
 	left: 20%;
 	box-shadow: 0 5px 5px 0 rgba(42, 68, 124, 0.658), 0 5px 15px 5px rgba(63, 170, 170, 0.651);
@@ -55,7 +59,7 @@ img:hover{
 	height: 100%;
 	position: absolute;
 	padding: 30px 70px 50px 70px;
-	background: rgba(1, 2, 5, 0.9);
+	background: rgba(3, 16, 58, 0.9);
 }
 
 .login-html .log-in-htm,
@@ -85,9 +89,10 @@ img:hover{
 	margin: 0 15px 10px 0;
 	display: inline-block;
 	border-bottom: 3px solid transparent;
+	font-family: 'Roboto Slab', serif;
 }
 .login-html .tab:hover{
-	color: rgb(64, 63, 114);
+	color: rgb(159, 158, 228);
 	cursor: pointer;
 }
 
@@ -110,9 +115,14 @@ img:hover{
 .login-form .group{
 	margin-bottom: 10px;
 }
-
-.login-form .group .label,
-.login-form .group .input{
+.label{
+	font-family: 'Raleway', sans-serif;
+}
+.input{
+	font-family: 'Nunito', sans-serif;
+}
+.label,
+.input{
 	width: 100%;
 	display: block;
 }
@@ -123,8 +133,8 @@ img:hover{
 }
 
 /*for the input regions*/
-.login-form .group .input,
-.login-form .group .button{
+.input,
+.button{
 	border: none;
 	padding: 15px 20px;
 	color:ivory;
@@ -170,6 +180,7 @@ footer{
 	text-align: center;
 	padding: 2px;
 	color:cornsilk;
+	font-family: 'Montserrat', sans-serif;
 }
 .footer-copy{
 	background-color: darkblue;
@@ -188,10 +199,12 @@ footer{
 .left-content{
 	height:100%;
 	width:100%;
-	padding: 30px 70px 20px 25px;
-	background-color: rgb(82, 43, 172);
+	padding: 30px 25px 20px 25px;
+	background-color: rgba(82, 43, 172, 0.575);
 }
-
+.left-content h2{
+	font-family: 'Montserrat', sans-serif;
+}
 i{
 	float: right;
 	margin-top: -30px;
@@ -200,13 +213,82 @@ i{
 	cursor:pointer;
 	color:rgb(240, 234, 234);
 }
+
+.helplines{
+	font-family: 'Raleway', sans-serif;
+}
+fieldset{
+	border-width:3px;
+	border-color:cyan;
+	width:100%;
+}
+legend{
+	font-family: monospace;
+	font-style: italic;
+}
+.left-content hr{
+	border-width: 3px;
+}
+blockquote{
+	text-align: left;
+	font-family: 'Merriweather', sans-serif;
+}
+figcaption{
+	text-align: right;
+	font-family: 'Nunito', sans-serif;
+}
+table, th, td{
+	border-color:white;
+	border-width:1px;
+	border-style:solid;
+	border-collapse: collapse;
+}
 </style>
 </head>
 <body>
 	<div class="left-hand-side">
 		<div class="left-content">
 			<h1> Welcome! </h1>
-			Contact us:
+			<hr><br>
+			<h2> Helplines: </h2>
+			<div class="helplines">
+				<table>
+					<tr>
+						<td>Ambulance:</td>
+						<td><b>102</b></td>
+					</tr>
+					<tr>
+						<td>Blood Bank Info:</td>
+						<td><b>1910</b></td>
+					</tr>
+					<tr>
+						<td>Disaster Management:</td>
+						<td><b>108</b></td>
+					</tr>
+					<tr>
+						<td>National Health Helpline:</td>
+						<td><b>1800-180-1104</b></td>
+					</tr>
+				</table>
+			</div> <br>
+			<hr> <br>
+			<fieldset>
+				<legend>Testimonials</legend>
+				<blockquote>
+					"I used VaxiNO'Pandemic to schedule my vaccine appointment
+					and everything went very smoothly!"
+				</blockquote>
+				<figcaption>
+					&mdash; Sid, Bengaluru
+				</figcaption>
+				<blockquote>
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+					sed do eiusmod tempor incididunt ut labore et VaxiNO'Pandemic aliqua."
+				</blockquote>
+				<figcaption>
+					&mdash; Raj, Chennai
+				</figcaption>
+			</fieldset>
 		</div>
 	</div>
     <div class="login-wrap">
@@ -227,7 +309,7 @@ i{
                     <div class="group">
                         <label for="pass" class="label">PASSWORD</label>
                         <input id="pass" name="pass" type="password" class="input" data-type="password" required style="width:90%">&nbsp;
-						<i id="pass-status" class="fa fa-eye" style="width:5%" aria-hidden="true" onClick="viewPass()"></i>
+						<i id="pass-status" class="fa fa-eye fa-lg" style="width:5%" aria-hidden="true" onClick="viewPass()"></i>
                     </div>
                     <div class="group">
                         <input type="submit" class="button" value="SIGN IN">
@@ -285,12 +367,12 @@ i{
 			var pass_stat = document.getElementById('pass-status');
 			if (pass_in.type == 'password'){
 				pass_in.type='text';
-				pass_stat.className='fa fa-eye-slash';
+				pass_stat.className='fa fa-eye-slash fa-lg';
 				
 			}
 			else{
 				pass_in.type='password';
-				pass_stat.className='fa fa-eye';
+				pass_stat.className='fa fa-eye fa-lg';
 			}
 		}
 	</script>

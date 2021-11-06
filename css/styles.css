@@ -75,12 +75,16 @@ a {
     */
 }
 
+.map-in{
+    width: 75%;
+    height: 420px;
+}
+
 .float-left-img {
     background-color: #00fff240;
     float: left;
     margin-right: 15px;
     width: 100px;
-
     transition: background 2s, transform 2s;
 }
 
@@ -105,6 +109,7 @@ a {
     justify-content: space-around;
     padding: 50px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 .profile-box {
     color: aliceblue;
@@ -112,4 +117,13 @@ a {
     flex-direction: column;
     justify-content: center;
     padding: 30px;
+}
+.profile-box a{
+    font-family: 'Montserrat', sans-serif;
+}
+.profile-box h2{
+    font-family: 'Merriweather', sans-serif;
+}
+footer {
+    font-family: 'Montserrat', sans-serif;
 }
