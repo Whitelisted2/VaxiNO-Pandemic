@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 <style>
 h1{
 	font-family: 'Merriweather', serif;
@@ -139,11 +140,12 @@ img:hover{
 	-webkit-appearance: none;
 
 }
+/*
 .login-form .group input[data-type="password"]{
 	-webkit-text-security: circle;
 	-moz-text-security: circle;
 }
-
+*/
 .login-form .group .label{
 	color: #aaa;
 	font-size: 12px;
@@ -189,6 +191,15 @@ footer{
 	padding: 30px 70px 20px 25px;
 	background-color: rgb(82, 43, 172);
 }
+
+i{
+	float: right;
+	margin-top: -30px;
+}
+.fa:hover{
+	cursor:pointer;
+	color:rgb(240, 234, 234);
+}
 </style>
 </head>
 <body>
@@ -211,11 +222,12 @@ footer{
 					<form action="login.php" method="POST">
                     <div class="group">
                         <label for="phnum" class="label">PHONE NUMBER</label>
-                        <input id="phnum" name="phnum" type="number" class="input">
+                        <input id="phnum" name="phnum" type="number" class="input" required>
                     </div>
                     <div class="group">
                         <label for="pass" class="label">PASSWORD</label>
-                        <input id="pass" name="pass" type="password" class="input" data-type="password">
+                        <input id="pass" name="pass" type="password" class="input" data-type="password" required style="width:90%">&nbsp;
+						<i id="pass-status" class="fa fa-eye" style="width:5%" aria-hidden="true" onClick="viewPass()"></i>
                     </div>
                     <div class="group">
                         <input type="submit" class="button" value="SIGN IN">
@@ -266,5 +278,21 @@ footer{
 		&copy; 2021 VaxiNO'Pandemic
 		</div>
 	</footer>
+	<script>
+		function viewPass()
+		{
+			var pass_in = document.getElementById('pass');
+			var pass_stat = document.getElementById('pass-status');
+			if (pass_in.type == 'password'){
+				pass_in.type='text';
+				pass_stat.className='fa fa-eye-slash';
+				
+			}
+			else{
+				pass_in.type='password';
+				pass_stat.className='fa fa-eye';
+			}
+		}
+	</script>
 </body>
 </html>
