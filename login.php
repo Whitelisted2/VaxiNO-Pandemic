@@ -11,6 +11,11 @@ session_start()
 </head>
 <body>
     <?php
+    if(!(isset($_POST["phnum"]) && isset($_POST["pass"])))
+    {
+        die("Please go back and Login Valid Credentials !!!");
+    }
+
     $servername = $_SERVER['SERVER_NAME'];
     $username="root";
     $password="";
