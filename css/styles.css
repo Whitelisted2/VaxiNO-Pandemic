@@ -95,18 +95,6 @@ a {
     transition: background 2s, transform 2s;
 }
 
-.testing-shadow-box {
-    display: block;
-    /* font-style: ; */
-    margin: 10px auto;
-    text-align: left;
-    width: 50%;
-    background-color:darkblue;
-    box-shadow: 10px 10px;
-    padding: 30px;
-    color: darkgray;
-}
-
 /*******************Footer Section*************************/
 .bottom-container {
     background: rgb(0, 60, 128);
