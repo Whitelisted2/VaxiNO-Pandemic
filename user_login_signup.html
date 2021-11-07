@@ -120,6 +120,7 @@ img:hover{
 }
 .input{
 	font-family: 'Nunito', sans-serif;
+	height:40px;
 }
 .label,
 .input{
@@ -148,7 +149,6 @@ img:hover{
 }
 .login-form .group .input::-webkit-inner-spin-button{
 	-webkit-appearance: none;
-
 }
 /*
 .login-form .group input[data-type="password"]{
@@ -213,7 +213,14 @@ i{
 	cursor:pointer;
 	color:rgb(240, 234, 234);
 }
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    border-width: thin;
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    color: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+}
 .helplines{
 	font-family: 'Raleway', sans-serif;
 }
@@ -243,6 +250,9 @@ table, th, td{
 	border-style:solid;
 	border-collapse: collapse;
 }
+td{
+	padding:3px;
+}
 </style>
 </head>
 <body>
@@ -250,7 +260,7 @@ table, th, td{
 		<div class="left-content">
 			<h1> Welcome! </h1>
 			<hr><br>
-			<h2> Helplines: </h2>
+			<h2> Emergency Helplines: </h2>
 			<div class="helplines">
 				<table>
 					<tr>
@@ -321,6 +331,10 @@ table, th, td{
 					<div class="group">
                         <label for="name" class="label">FULL NAME</label>
                         <input id="name" name="name" type="text" class="input" required>
+                    </div>
+					<div class="group">
+                        <label for="dob" class="label">DATE OF BIRTH</label>
+                        <input id="dob" name="dob" type="date" class="input" required>
                     </div>
                     <div class="group">
                         <label for="phnum" class="label">PHONE NUMBER</label>
