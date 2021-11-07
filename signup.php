@@ -51,7 +51,7 @@
         $email_user=trim($_POST["email"]);
         $pincode_user=$_POST["pincode"];
         $name_user=trim($_POST["name"]);
-        $age=$_POST["age"]
+        $age=$_POST["age"];
 
         $command="CREATE TABLE IF NOT EXISTS usertable (
             name_user VARCHAR(50) NOT NULL, 

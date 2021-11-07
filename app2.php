@@ -25,7 +25,7 @@ if(!isset($_POST['submit']))
         }
         else if($_SESSION["age_user"]>80)
         {
-            die("You are Over Aged. You can NOT register.")
+            die("You are Over Aged. You can NOT register.");
         }
         $servername = $_SERVER['SERVER_NAME'];
         $username="root";
