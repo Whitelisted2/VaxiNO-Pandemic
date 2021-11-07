@@ -74,15 +74,20 @@ if(isset($_SESSION["login_admin"]))
                 <br/>
                 <div class="certificate">
                     <?php
-                    if($_SESSION["vac1_approval_user"]==1)
-                    {
-                        echo "Download Certificate<br/>";
-                        echo "<img src='' width='90%'' height='80%''><br/>";
-                        echo "<button value='Download' id='download'>Download</button>";
-                    }
-                    else
+                    if($_SESSION["vac1_approval_user"]==0)
                     {
                         echo "Please wait for administrator to Approve/Update your vaccination status.";
+                    }
+                    else if($_SESSION["vac2_approval_user"]==1)
+                    {
+                        echo "<a href='download1.php'><button value='Download' id='download1'>Download Certificate for Dose 1</button></a><br/><br/>";
+                        echo "<a href='download2.php'><button value='Download' id='download2'>Download Certificate for Dose 2</button></a>";
+                    }
+                    else if($_SESSION["vac1_approval_user"]==1)
+                    {
+                        // echo "Download Certificate<br/>";
+                        // echo "<img src='' width='90%'' height='80%''><br/>";
+                        echo "<a href='download1.php'><button value='Download' id='download'>Download</button></a>";
                     }
                     ?>
                 </div>
@@ -149,8 +154,12 @@ if(isset($_SESSION["login_admin"]))
             if($_SESSION["app1_approval_user"]==0){
                 echo "<form action='app1.php' method='POST'><button name='submit'>Book Appointment 1</button></form><br/>";
             }
-            else if($_SESSION["app1_approval_user"]==1 && $_SESSION["vac1_approval_user"]==1){
-                echo "<button action='app2.php'>Book Appointment 2</button><br/>";
+            else if($_SESSION["app1_approval_user"]==1 && $_SESSION["vac1_approval_user"]==1 && $_SESSION["app2_approval_user"]==0){
+                echo "<form action='app2.php' method='POST'><button name='submit'>Book Appointment 2</button></form><br/>";
+            }
+            else if($_SESSION["vac1_approval_user"]==1 && $_SESSION["vac2_approval_user"]==1){
+                echo "You are all set for downloading both of your certificates.<br/>";
+                echo "Thank You very much for getting Vaccinated.";
             }
             else{
                 echo "Please wait for administrator to update the status of your appointment/vaccination.";
