@@ -1,5 +1,9 @@
 <?php
-session_start()
+session_start();
+if(isset($_SESSION["login"]))
+{
+    die("Please Log out of the User Account !");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,11 +74,11 @@ session_start()
         $_SESSION["name_admin"]=$row["name_admin"];
         $_SESSION["id_admin"]=$row["id_admin"];
         echo $_SESSION["name_admin"]." is Logged in as an Administrator!<br/>";
-        echo 'Here you get Admin Privilages !';//<a href="loggedin.html">Click here</a>
+        echo 'Here you get Admin Privilages ! <a href="admin_loggedin.php">Click here</a>';
     }
     else{
         // invalid credentials
-        die("Please enter valid Ph. No. and password !");
+        die("Please enter valid Admin ID and password !");
     }
 
     // header("location : admin_loggedin.html")

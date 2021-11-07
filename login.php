@@ -1,5 +1,9 @@
 <?php
-session_start()
+session_start();
+if(isset($_SESSION["login_admin"]))
+{
+    die("Please Log out of the Admin Account !");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

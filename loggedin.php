@@ -7,6 +7,10 @@ if(!isset($_SESSION["login"]))
 {
     die("Not Authenticated!!!");
 }
+if(isset($_SESSION["login_admin"]))
+{
+    die("Please Log out of the Admin Account !");
+}
 ?>
 
 <!DOCTYPE html>
