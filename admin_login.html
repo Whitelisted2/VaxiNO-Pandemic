@@ -1,254 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Index</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        
-<style>
-h1{
-	font-family: 'Merriweather', serif;
-}
-/* general css for the body */
-body{
-	color:#636888;
-	background:#c3c3c9;
-	background-image: url(images/loginbg.jpg);
-	font:600 14px/18px 'Open Sans',sans-serif;
-}
-
-/*container for logo*/
-.flex-container{
-	display: flex;
-	justify-content: center;
-}
-
-/*Image opacity changes on hovering*/
-img{
-	opacity:1;
-}
-img:hover{
-	cursor: pointer;
-	opacity: 0.5;
-	transform: skewX(-2deg);
-}
-
-/* sets box sizing across all elements */
-*, *:after, *:before{
-    box-sizing: border-box;
-}
-
-.login-wrap{
-	width: 100%;
-	margin: auto;
-	max-width: 520px;
-	min-height: 700px;
-	position: relative;
-	box-shadow: 0 5px 5px 0 rgba(30, 72, 161, 0.418), 0 5px 15px 5px rgba(63, 170, 170, 0.651);
-}
-
-.login-html{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	padding: 30px 70px 50px 70px;
-	background: rgba(14, 41, 116, 0.9);
-}
-
-.login-html .log-in-htm,
-.login-html .sign-up-htm{
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	position: absolute;
-	transform: rotateY(180deg);
-	backface-visibility: hidden;
-	transition: all .5s linear;
-}
-
-/*Disguising the radio buttons*/
-.login-html .log-in,
-.login-html .sign-up,
-.login-form .group .check{
-	display: none;
-}
-
-/*the radio options*/
-.login-html .tab{
-	font-size: 23px;
-	margin-right: 15px;
-	padding-bottom: 5px;
-	margin: 0 15px 10px 0;
-	display: inline-block;
-	border-bottom: 3px solid transparent;
-}
-.login-html .tab:hover{
-	color: rgb(64, 63, 114);
-	cursor: pointer;
-}
-
-.login-html .log-in:checked + .tab,
-.login-html .sign-up:checked + .tab{
-	color: white;
-	border-color: #05c2fc;
-}
-
-.login-html .log-in:not(:checked),
-.login-html .sign-up:not(:checked){
-	color: rgb(100, 208, 223);
-}
-
-.login-form{
-	perspective: 1000px;
-	transform-style: preserve-3d;
-}
-
-.login-form .group{
-	margin-bottom: 10px;
-}
-
-.login-form .group .label,
-.login-form .group .input{
-	width: 100%;
-	display: block;
-}
-.login-form .group .button{
-	width: 100%;
-	display: block;
-	color: honeydew;
-}
-
-/*for the input regions*/
-.login-form .group .input,
-.login-form .group .button{
-	border: none;
-	padding: 15px 20px;
-	color:ivory;
-	border-radius: 25px;
-	background: rgba(255,255,255,0.1);
-}
-
-.login-form .group .input:hover{
-	background: rgb(84, 77, 185);
-	cursor: pointer;
-}
-.login-form .group .input::-webkit-inner-spin-button{
-	-webkit-appearance: none;
-
-}
-.login-form .group input[data-type="password"]{
-	-webkit-text-security: circle;
-	-moz-text-security: circle;
-}
-
-.login-form .group .label{
-	color: #aaa;
-	font-size: 12px;
-}
-
-.login-form .group .button{
-	background: #1161ee;
-}
-.login-form .group .button:hover{
-	background: #6bc1e9;
-	cursor: pointer;
-}
-
-.login-html .log-in:checked + .tab + .sign-up + .tab + .login-form .log-in-htm{
-	transform: rotate(0);
-}
-.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
-	transform: rotate(0);
-}
-
-footer{
-	text-align: center;
-	padding: 2px;
-	color:cornsilk;
-	font-family: 'Montserrat', sans-serif;
-}
-.footer-copy{
-	background-color: darkblue;
-	z-index:1;
-}
-
-.login-html h1{
-	font-family: 'Merriweather', serif;
-	color: ivory;
-	font-weight: 800;
-}
-</style>
-</head>
-<body>
-    <div class="login-wrap">
-        <div class="login-html">
-			<div class="flex-container">
-				<a href="index.html"><img src="images/logo.jpeg" width=350px onclick="gotohome()"></a>
+<html lang="en">
+	<head>
+		<title>Index</title>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/admin-login-layout.css">
+	</head>
+	<body>
+    	<div class="login-wrap">
+        	<div class="login-html">
+				<div class="flex-container">
+					<a href="index.html"><img src="images/logo.jpeg" width=350px onclick="gotohome()"></a>
+				</div>
+				<hr><br>
+				<center><h1> Administrator Log-In</h1></center>
+            	<div class="login-form">
+                	<form action="admin_login.php" method="POST">
+                    	<div class="group">
+                        	<label for="phnum" class="label">ADMIN ID</label>
+                        	<input id="phnum" name="admin_id" type="number" class="input">
+                    	</div>
+                   		<div class="group">
+                        	<label for="pass" class="label">PASSWORD</label>
+                        	<input id="pass" name="pass" type="password" class="input" data-type="password">
+                    	</div>
+                    	<div class="group">
+                        	<input type="submit" class="button" value="SIGN IN">
+                    	</div>
+					</form>
+            	</div>
 			</div>
-			<hr><br>
-			<center><h1> Administrator Log-In</h1></center>
-            <input id="tab-1" type="radio" name="tab" class="log-in" checked><label for="tab-1" class="tab"></label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
-			<div class="login-form">
-                <div class="log-in-htm">
-					<form action="admin_login.php" method="POST">
-                    <div class="group">
-                        <label for="phnum" class="label">ADMIN ID</label>
-                        <input id="phnum" name="admin_id" type="number" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">PASSWORD</label>
-                        <input id="pass" name="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="SIGN IN">
-                    </div>
-					</form>
-                </div> 
-                <div class="sign-up-htm">
-					<form action="signup.php" method="POST">
-					<div class="group">
-                        <label for="name" class="label">FULL NAME</label>
-                        <input id="name" name="name" type="text" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="phnum" class="label">PHONE NUMBER</label>
-                        <input id="phnum" name="phnum" type="text" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">PASSWORD</label>
-                        <input id="pass" name="pass" type="password" class="input" data-type="password" required>
-                    </div>
-                    <div class="group">
-                        <label for="reppass" class="label">REPEAT PASSWORD</label>
-                        <input id="reppass" name="repass" type="password" class="input" data-type="password" required>
-                    </div>
-                    <div class="group">
-                        <label for="email" class="label">EMAIL ADDRESS</label>
-                        <input id="email" name="email" type="text" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="pincode" class="label">PINCODE</label>
-                        <input id="pincode" name="pincode" type="number" class="input" required>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="SIGN UP">
-                    </div>
-					</form>
-                </div>
-            </div>
         </div>
-    </div>
-	<br>
-	<br>
-	<footer>
-		<div class="footer-copy">
-		&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)
-		</div>
-	</footer>
-</body>
+		<br>
+		<br>
+		<footer>
+			<div class="footer-copy">
+				&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)
+			</div>
+		</footer>
+	</body>
 </html>

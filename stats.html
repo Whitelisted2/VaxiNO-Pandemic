@@ -1,175 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistics</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navigationBar.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        
-    <style>
-        .left-col{
-            width:42%;
-            float:left;
-            margin-left:5%;
-            display:block;
-            padding:15px;
-        }
-        .right-col{
-            width:42%;
-            float:right;
-            margin-right:5%;
-            display:block;
-            padding:15px;
-        }
-        .row{
-            border-style: solid;
-            border-color: ivory;
-            border-width: 3px;
-            margin-left: 10%;
-            margin-right: 10%;
-            box-shadow:rgb(255, 78, 255) 0 0 3px 3px;
-            -webkit-box-shadow: rgb(255, 78, 255) 0 0 3px 3px;
-        }
-        .row:after{
-            box-sizing:border-box;
-            content:"";
-            display:table;
-            clear:both;
-        }
-        html{
-            height:100%;
-        }
-        body{
-            background-image: linear-gradient(to bottom right,red, blue);
-            height:auto;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family: 'Kanit', sans-serif;
-        }
-        h2{
-            font-family: 'Ubuntu', sans-serif;
-            box-sizing: border-box;
-            width:100%;
-        }
-        .left-col h2{
-            float:right;
-        }
-        .right-col h2{
-            float:left;
-        }
-        h2:after{
-            clear:both;
-            content:"";
-        }
-        a:hover{
-            color:ivory;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Statistics</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/statspage.css">
+        <link rel="stylesheet" href="css/navigationBar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    </head>
 
-        h1{
-            color:aliceblue;
-            font-family: 'Merriweather Sans', sans-serif;
-        }
-
-        p,
-        blockquote{
-            color: rgb(128, 255, 78);
-        }
-
-        footer{
-            background-color: rgb(233, 115, 115);
-            color:black;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-    </style>
-</head>
-<body>
-
-<!--NAVIGATION BAR-->
-<div class="navbar">
-    <div class="logosmall">
-        <a href="index.html">
-            <img class="nav-logo" src="images/logo_short2.jpg" alt="dark_logo">
-        </a>
-    </div>
-    <div class="cloumn-flexing">
-        <span><a class="nav-list" href="index.html">Home</a></span>
-        <span><a class="nav-list" href="team_members.html">Members</a></span>
-        <span><a class="nav-list" href="proj_overview.html">Overview</a></span>
-        <span><a class="nav-list" href="awareness.html">Awareness</a></span>
-    </div>
-</div>
-<br> <br> <br>
-<h1>Statistics Regarding COVID-19 in India</h1>
-<br>
-<div class="row">
-    <div class="left-col">
-        <h2> Cumulative Confirmed Cases &rightrightarrows;</h2>
-        <p>
-            The data for this graph has been obtained with the aid of <a href="https://www.mongodb.com/developer/article/johns-hopkins-university-covid-19-rest-api/">
-            MongoDB COVID-19 Open Data project</a>, which is a free cluster for data on COVID-19, that is sourced from 
-            <a href="https://github.com/CSSEGISandData/COVID-19">John Hopkins CSSE</a>. The data is
-            updated everyday, and is built for easy integration. We have used the <b>requests</b> library
-            in <em>Python</em> to visualise the data!
-        </p>
-    </div>
-    <div class="right-col">
-         <img src="stat1.jpeg" width="90%">
-    </div>
-</div>
-<br><br>
-<div class="row">
-    <div class="left-col">
-        <img src="stat2.jpeg" width="90%">
-    </div>
-    <div class="right-col">
-        <h2>&leftleftarrows; Stats for Cases observed daily</h2>
-        <p>
-            Python helps a lot with converting data into a graphical, user-friendly format!
-            It has simple and clean syntax, object encapsulation, good library support, 
-            and optional named parameters. It may be hard initially to adapt to the indentation rules,
-            but when it all works together in a project, it makes it feel worth it!
-        </p>
-    </div>
-</div>
-<br><br>
-<div class="row">
-    <div class="left-col">
-        <h2>Stats for Deaths observed daily &rightrightarrows;</h2>
-        <p>
-            Our project may not have <i>real</i> impact on people who were affected by the COVID-19 
-            Pandemic, but we are immensely grateful for the healthcare workers at the frontlines! 
-            We have increased our understanding of several concepts during this time; and hope that we 
-            can apply these concepts in doing more for the community.
-        </p>
-    </div>
-    <div class="right-col">
-        <img src="stat3.jpeg" width="90%">
-    </div>
-</div>
-<br>
-<p>In the words of the creator of the API,</p>
-<figure>
-<blockquote><i>
-"I truly hope you will be able to build something amazing with this REST API. 
-Even if it won't save the world from this COVID-19 pandemic, 
-I hope it will be a great source of motivation and training for your next pet project."
-</i></blockquote>
-<figcaption>
-&mdash; <a href="https://twitter.com/MBeugnet">M. Beugnet</a>
-</figcaption>
-</figure>
-<br>
-<br>
-<footer>
-    <p>&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)</p> 
-</footer>
-</body>
+    <body>
+        <!--NAVIGATION BAR-->
+        <div class="navbar">
+            <div class="logosmall">
+                <a href="index.html">
+                    <img class="nav-logo" src="images/logo_short2.jpg" alt="dark_logo">
+                </a>
+            </div>
+            <div class="cloumn-flexing">
+                <span><a class="nav-list" href="index.html">Home</a></span>
+                <span><a class="nav-list" href="team_members.html">Members</a></span>
+                <span><a class="nav-list" href="proj_overview.html">Overview</a></span>
+                <span><a class="nav-list" href="awareness.html">Awareness</a></span>
+            </div>
+        </div>
+        <br> <br> <br>
+        <h1>Statistics Regarding COVID-19 in India</h1>
+        <br>
+        <div class="row">
+            <div class="left-col">
+                <h2> Cumulative Confirmed Cases &rightrightarrows;</h2>
+                <p>
+                The data for this graph has been obtained with the aid of <a href="https://www.mongodb.com/developer/article/johns-hopkins-university-covid-19-rest-api/">
+                MongoDB COVID-19 Open Data project</a>, which is a free cluster for data on COVID-19, that is sourced from 
+                <a href="https://github.com/CSSEGISandData/COVID-19">John Hopkins CSSE</a>. The data is
+                updated everyday, and is built for easy integration. We have used the <b>requests</b> library
+                in <em>Python</em> to visualise the data!
+                </p>
+            </div>
+            <div class="right-col">
+                <img src="stat1.jpeg" width="90%">
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="left-col">
+                <img src="stat2.jpeg" width="90%">
+            </div>
+            <div class="right-col">
+                <h2>&leftleftarrows; Stats for Cases observed daily</h2>
+                <p>
+                Python helps a lot with converting data into a graphical, user-friendly format!
+                It has simple and clean syntax, object encapsulation, good library support, 
+                and optional named parameters. It may be hard initially to adapt to the indentation rules,
+                but when it all works together in a project, it makes it feel worth it!
+                </p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="left-col">
+                <h2>Stats for Deaths observed daily &rightrightarrows;</h2>
+                <p>
+                Our project may not have <i>real</i> impact on people who were affected by the COVID-19 
+                Pandemic, but we are immensely grateful for the healthcare workers at the frontlines! 
+                We have increased our understanding of several concepts during this time; and hope that we 
+                can apply these concepts in doing more for the community.
+                </p>
+            </div>
+            <div class="right-col">
+                <img src="stat3.jpeg" width="90%">
+            </div>
+        </div>
+        <br>
+        <p>In the words of the creator of the API,</p>
+        <figure>
+            <blockquote><i>
+            "I truly hope you will be able to build something amazing with this REST API. 
+            Even if it won't save the world from this COVID-19 pandemic, 
+            I hope it will be a great source of motivation and training for your next pet project."
+            </i></blockquote>
+            <figcaption>
+            &mdash; <a href="https://twitter.com/MBeugnet">M. Beugnet</a>
+            </figcaption>
+        </figure>
+        <br> <br>
+        <footer>
+            &copy;2021 VaxiNO'Pandemic (A step towards faster vaccination) 
+        </footer>
+    </body>
 </html>
