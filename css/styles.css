@@ -37,6 +37,7 @@ a {
 }
 
 .vaccdata{
+    background-image: linear-gradient(to bottom left, rgb(107, 253, 185), rgb(84, 184, 252)) ;
     display:block;
     box-sizing: border-box;
     height: auto;
@@ -74,12 +75,6 @@ a {
     display: block;
     height: auto;
     padding: 20px;
-    /* width: 100%; */
-    /* background-clip: padding-box; 
-    background-origin: content-box;
-    background-size: cover;
-    background-size: 100px 80px;
-    */
 }
 
 .map-in{
