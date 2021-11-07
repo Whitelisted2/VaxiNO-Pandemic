@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+		<script src="scripts/eyescript.js"></script>
 		<style>
 		h1{
 			font-family: 'Merriweather', serif;
@@ -254,140 +255,125 @@
 		</style>
 	</head>
 	
-<body>
-	<div class="left-hand-side">
-		<div class="left-content">
-			<h1> Welcome! </h1>
-			<hr><br>
-			<h2> Emergency Helplines: </h2>
-			<div class="helplines">
-				<table>
-					<tr>
-						<td>Ambulance:</td>
-						<td><b>102</b></td>
-					</tr>
-					<tr>
-						<td>Blood Bank Info:</td>
-						<td><b>1910</b></td>
-					</tr>
-					<tr>
-						<td>Disaster Management:</td>
-						<td><b>108</b></td>
-					</tr>
-					<tr>
-						<td>National Health Helpline:</td>
-						<td><b>1800-180-1104</b></td>
-					</tr>
-				</table>
-			</div> <br>
-			<hr> <br>
-			<fieldset>
-				<legend>Testimonials</legend>
-				<blockquote>
-					"I used VaxiNO'Pandemic to schedule my vaccine appointment
-					and everything went very smoothly!"
-				</blockquote>
-				<figcaption>
-					&mdash; Sid, Bengaluru
-				</figcaption>
-				<blockquote>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-					sed do eiusmod tempor incididunt ut labore et VaxiNO'Pandemic aliqua."
-				</blockquote>
-				<figcaption>
-					&mdash; Raj, Chennai
-				</figcaption>
-			</fieldset>
-		</div>
-	</div>
-    <div class="login-wrap">
-        <div class="login-html">
-			<div class="flex-container">
-				<a href="index.html"><img src="images/logo.jpeg" width=350px onclick="gotohome()"></a>
+	<body>
+		<div class="left-hand-side">
+			<div class="left-content">
+				<h1> Welcome! </h1>
+				<hr><br>
+				<h2> Emergency Helplines: </h2>
+				<div class="helplines">
+					<table>
+						<tr>
+							<td>Ambulance:</td>
+							<td><b>102</b></td>
+						</tr>
+						<tr>
+							<td>Blood Bank Info:</td>
+							<td><b>1910</b></td>
+						</tr>
+						<tr>
+							<td>Disaster Management:</td>
+							<td><b>108</b></td>
+						</tr>
+						<tr>
+							<td>National Health Helpline:</td>
+							<td><b>1800-180-1104</b></td>
+						</tr>
+					</table>
+				</div> <br>
+				<hr> <br>
+				<fieldset>
+					<legend>Testimonials</legend>
+					<blockquote>
+						"I used VaxiNO'Pandemic to schedule my vaccine appointment
+						and everything went very smoothly!"
+					</blockquote>
+					<figcaption>
+						&mdash; Sid, Bengaluru
+					</figcaption>
+					<blockquote>
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+						sed do eiusmod tempor incididunt ut labore et VaxiNO'Pandemic aliqua."
+					</blockquote>
+					<figcaption>
+						&mdash; Raj, Chennai
+					</figcaption>
+				</fieldset>
 			</div>
-			<hr><br>
-            <input id="tab-1" type="radio" name="tab" class="log-in" checked><label for="tab-1" class="tab">LOG IN</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">SIGN UP</label>
-            <div class="login-form">
-                <div class="log-in-htm">
-					<form action="login.php" method="POST">
-                    <div class="group">
-                        <label for="phnum" class="label">PHONE NUMBER</label>
-                        <input id="phnum" name="phnum" type="number" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">PASSWORD</label>
-                        <input id="pass" name="pass" type="password" class="input" data-type="password" required style="width:90%">&nbsp;
-						<i id="pass-status" class="fa fa-eye fa-lg" style="width:5%" aria-hidden="true" onClick="viewPass()"></i>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="SIGN IN">
-                    </div>
-					</form>
-                </div>
-                <div class="sign-up-htm">
-					<form action="signup.php" method="POST">
-					<div class="group">
-                        <label for="name" class="label">FULL NAME</label>
-                        <input id="name" name="name" type="text" class="input" required>
-                    </div>
-					<div class="group">
-                        <label for="dob" class="label">DATE OF BIRTH</label>
-                        <input id="dob" name="dob" type="date" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="phnum" class="label">PHONE NUMBER</label>
-                        <input id="phnum" name="phnum" type="text" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">PASSWORD</label>
-                        <input id="pass" name="pass" type="password" class="input" data-type="password" required>
-                    </div>
-                    <div class="group">
-                        <label for="reppass" class="label">REPEAT PASSWORD</label>
-                        <input id="reppass" name="repass" type="password" class="input" data-type="password" required>
-                    </div>
-                    <div class="group">
-                        <label for="email" class="label">EMAIL ADDRESS</label>
-                        <input id="email" name="email" type="text" class="input" required>
-                    </div>
-                    <div class="group">
-                        <label for="pincode" class="label">PINCODE</label>
-                        <input id="pincode" name="pincode" type="number" class="input" required>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="SIGN UP">
-                    </div>
-					</form>
-                </div>
-            </div>
-        </div>
-    </div>
-	<br>
-	<br>
-	<footer>
-		Click on the logo to navigate back to the home page!
-	</footer>
-	<footer>
-		<div class="footer-copy">
-		&copy; 2021 VaxiNO'Pandemic
 		</div>
-	</footer>
-	<script>
-		function viewPass()
-		{
-			var pass_in = document.getElementById('pass');
-			var pass_stat = document.getElementById('pass-status');
-			if (pass_in.type == 'password'){
-				pass_in.type='text';
-				pass_stat.className='fa fa-eye-slash fa-lg';
-				
-			}
-			else{
-				pass_in.type='password';
-				pass_stat.className='fa fa-eye fa-lg';
-			}
-		}
-	</script>
-</body>
+    	<div class="login-wrap">
+        	<div class="login-html">
+				<div class="flex-container">
+					<a href="index.html"><img src="images/logo.jpeg" width=350px onclick="gotohome()"></a>
+				</div>
+				<hr><br>
+           		<input id="tab-1" type="radio" name="tab" class="log-in" checked><label for="tab-1" class="tab">LOG IN</label>
+            	<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">SIGN UP</label>
+        	    <div class="login-form">
+        	        <div class="log-in-htm">
+						<form action="login.php" method="POST">
+        	            	<div class="group">
+        	                	<label for="phnum" class="label">PHONE NUMBER</label>
+        	                	<input id="phnum" name="phnum" type="number" class="input" required>
+         	          		</div>
+           	        		<div class="group">
+                        		<label for="pass" class="label">PASSWORD</label>
+                        		<input id="pass" name="pass" type="password" class="input" data-type="password" required style="width:90%">&nbsp;
+								<i id="pass-status" class="fa fa-eye fa-lg" style="width:5%" aria-hidden="true" onClick="viewPass()"></i>
+                    		</div>
+                    		<div class="group">
+                        		<input type="submit" class="button" value="SIGN IN">
+                    		</div>
+						</form>
+                	</div>
+                	<div class="sign-up-htm">
+						<form action="signup.php" method="POST">
+							<div class="group">
+                        		<label for="name" class="label">FULL NAME</label>
+                        		<input id="name" name="name" type="text" class="input" required>
+                    		</div>
+							<div class="group">
+                        		<label for="dob" class="label">DATE OF BIRTH</label>
+                        		<input id="dob" name="dob" type="date" class="input" required>
+                    		</div>
+                    		<div class="group">
+                        		<label for="phnum" class="label">PHONE NUMBER</label>
+                        		<input id="phnum" name="phnum" type="text" class="input" required>
+                    		</div>
+                    		<div class="group">
+                        		<label for="pass" class="label">PASSWORD</label>
+                        		<input id="pass" name="pass" type="password" class="input" data-type="password" required>
+                    		</div>
+                    		<div class="group">
+                        		<label for="reppass" class="label">REPEAT PASSWORD</label>
+                        		<input id="reppass" name="repass" type="password" class="input" data-type="password" required>
+                   			</div>
+                    		<div class="group">
+                        		<label for="email" class="label">EMAIL ADDRESS</label>
+                        		<input id="email" name="email" type="text" class="input" required>
+                    		</div>
+                    		<div class="group">
+                        		<label for="pincode" class="label">PINCODE</label>
+                        		<input id="pincode" name="pincode" type="number" class="input" required>
+                    		</div>
+                    		<div class="group">
+                        		<input type="submit" class="button" value="SIGN UP">
+                    		</div>
+						</form>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+		<br>
+		<br>
+		<footer>
+			Click on the logo to navigate back to the home page!
+		</footer>
+		<footer>
+			<div class="footer-copy">
+				&copy; 2021 VaxiNO'Pandemic
+			</div>
+		</footer>
+		
+	</body>
 </html>
