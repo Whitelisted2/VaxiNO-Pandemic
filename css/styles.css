@@ -36,6 +36,13 @@ a {
     margin-top: 60px;
 }
 
+.vaccdata{
+    display:block;
+    box-sizing: border-box;
+    height: auto;
+    padding: 20px;
+}
+
 .container {
     background-color: #E3FDFD;
     display: block;
