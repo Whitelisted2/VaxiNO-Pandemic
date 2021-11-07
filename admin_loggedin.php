@@ -38,18 +38,41 @@ if(isset($_SESSION["login"]))
         $command = "use allusers";
         $result = mysqli_query($conn, $command);
 
+        echo "<hr>";
+
         echo "Users to be approved for Dose 1 :-<br/><br/>";
-        $command = "SELECT * FROM usertable WHERE app1_approval_user=0";
+        $command = "SELECT * FROM usertable WHERE app1_approval_user=1";
         $result = mysqli_query($conn, $command);
-        echo "<table>";
         echo "<form action='update_app1.php' method='POST'>";
-        echo "<th>check</th><th>Name</th><th>Age</th>";
-        while($row=mysqli_fetch_assoc($result))
+        echo "<table>";
+        echo "<tr><th>check</th><th>Name</th><th>Age</th></tr>";
+        $row=mysqli_fetch_assoc($result);
+        while($row)
         {
-            echo "<tr><input type='checkbox'></tr><tr>".$row['name_user']."</tr><tr>".$row['age_user']."</tr>";
+            echo "<tr><td><input type='checkbox'></td><td>".$row['name_user']."</td><td>".$row['age_user']."</td></tr>";
+            $row=mysqli_fetch_assoc($result);
         }
-        echo "</form>";
         echo "</table>";
+        echo "<br/><input type='button' name='submit' value='Approve as Vaccinated Dose 1'>";
+        echo "</form>";
+
+        echo "<hr>";
+
+        echo "Users to be approved for Dose 2 :-<br/><br/>";
+        $command = "SELECT * FROM usertable WHERE app2_approval_user=1";
+        $result = mysqli_query($conn, $command);
+        echo "<form action='update_app2.php' method='POST'>";
+        echo "<table>";
+        echo "<tr><th>check</th><th>Name</th><th>Age</th></tr>";
+        $row=mysqli_fetch_assoc($result);
+        while($row)
+        {
+            echo "<tr><td><input type='checkbox'></td><td>".$row['name_user']."</td><td>".$row['age_user']."</td></tr>";
+            $row=mysqli_fetch_assoc($result);
+        }
+        echo "</table>";
+        echo "<br/><input type='button' name='submit' value='Approve as Vaccinated Dose 1'>";
+        echo "</form>";
     ?>
 </body>
 </html>
