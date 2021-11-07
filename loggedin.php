@@ -22,7 +22,7 @@ if(isset($_SESSION["login_admin"]))
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Profile/Account</title>
+        <title>User Dashboard</title>
         <link rel="stylesheet" href="css/dashlayout_user.css">
         <link rel="stylesheet" href="css/navigationBar.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +36,14 @@ if(isset($_SESSION["login_admin"]))
                 font-family: 'Roboto', sans-serif;
                 color:ivory;
             }
+            body{
+                font-family: 'Nunito', sans-serif;
+            }
+            
         </style>
     </head>
     <body>
-        <div class="navbar">
+        <div class="navbar" style="z-index:0;">
             <div class="logosmall">
                 <a href="index.html">
                     <img class="nav-logo" src="images/logo_short2.jpg" alt="dark_logo">
@@ -58,7 +62,7 @@ if(isset($_SESSION["login_admin"]))
         <div class="main">
             <div class="left">
                 <h2>Vaccination Status</h2>
-                <br>
+                <hr>
                 <div class="details">
                     <div id="name">Name :&nbsp;<span class="user_name"><?php echo $_SESSION["name_user"] ?></span></div>
                     <div id="age">Age&emsp;:&nbsp;<span><?php echo $_SESSION["age_user"]?></span></div>
@@ -68,25 +72,6 @@ if(isset($_SESSION["login_admin"]))
                 </div>
                 <br/>
                 <hr>
-                <br/>
-                <br/>
-                <div class="certificate">
-                    <?php
-                    if($_SESSION["vac1_approval_user"]==0)
-                    {
-                        echo "Please wait for administrator to Approve/Update your vaccination status.";
-                    }
-                    else if($_SESSION["vac2_approval_user"]==1)
-                    {
-                        echo "<a href='download1.php'><button value='Download' id='download1'>Download Certificate for Dose 1</button></a><br/><br/>";
-                        echo "<a href='download2.php'><button value='Download' id='download2'>Download Certificate for Dose 2</button></a>";
-                    }
-                    else if($_SESSION["vac1_approval_user"]==1)
-                    {
-                        echo "<a href='download1.php'><button value='Download' id='download'>Download</button></a>";
-                    }
-                    ?>
-                </div>
                 
             </div>
             <div class="right">
@@ -143,6 +128,7 @@ if(isset($_SESSION["login_admin"]))
             
         </div>
         <div class="cert-block">
+            <h2> Vaccine Certificate Status </h2>
             <?php
             if($_SESSION["app1_approval_user"]==0){
                 echo "<form action='app1.php' method='POST'><button name='submit'>Book Appointment 1</button></form><br/>";
@@ -151,17 +137,38 @@ if(isset($_SESSION["login_admin"]))
                 echo "<form action='app2.php' method='POST'><button name='submit'>Book Appointment 2</button></form><br/>";
             }
             else if($_SESSION["vac1_approval_user"]==1 && $_SESSION["vac2_approval_user"]==1){
-                echo "You are all set for downloading both of your certificates.<br/>";
-                echo "Thank You very much for getting Vaccinated.";
+                echo "You are all set to download both of your vaccine certificates!<br/>";
+                echo "Thank You for getting Vaccinated.";
             }
             else{
                 echo "Please wait for administrator to update the status of your appointment/vaccination.";
             }
             ?>
+            <hr>
+            <h2> Certificate Download </h2>
+            <div class="certificate">
+                <?php
+                if($_SESSION["vac1_approval_user"]==0)
+                {
+                    echo "Please wait for administrator to Approve/Update your vaccination status.";
+                }
+                else if($_SESSION["vac2_approval_user"]==1)
+                {
+                    echo "<a href='download1.php'><button value='Download' id='download1'>Download Certificate for Dose 1</button></a><br/><br/>";
+                    echo "<a href='download2.php'><button value='Download' id='download2'>Download Certificate for Dose 2</button></a>";
+                }
+                else if($_SESSION["vac1_approval_user"]==1)
+                {
+                    echo "<a href='download1.php'><button value='Download' id='download'>Download</button></a>";
+                }
+                ?>
+            </div>
         </div>
-        
+        <div class="squareright">
+            <img src="images/get-vacc.jpg" width="80%">
+        </div>
         <footer>
-            &copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)
+            <p>&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)</p>
         </footer>
     </body>
 </html>

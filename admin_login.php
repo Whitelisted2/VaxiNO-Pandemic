@@ -15,9 +15,15 @@ if(isset($_SESSION["login"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/most-basic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    
     <title>Logging You In !</title>
 </head>
 <body>
+    <div class="simple-box">
     <?php
     $servername = $_SERVER['SERVER_NAME'];
     $username="root";
@@ -77,16 +83,16 @@ if(isset($_SESSION["login"]))
         $_SESSION["login_admin"]=1;
         $_SESSION["name_admin"]=$row["name_admin"];
         $_SESSION["id_admin"]=$row["id_admin"];
-        echo $_SESSION["name_admin"]." is Logged in as an Administrator!<br/>";
-        echo 'Here you get Admin Privilages ! <a href="admin_loggedin.php">Click here</a>';
+        header("location: admin_loggedin.php");
     }
     else{
         // invalid credentials
-        die("Please enter valid Admin ID and password !");
+        die("Please&nbsp;<a href='admin_login.php'>try again</a>&nbsp;and enter valid Admin ID and password !");
     }
-
+    
     // header("location : admin_loggedin.html")
     // please un-comment the adove line later
     ?>
+    </div>
 </body>
 </html>

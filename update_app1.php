@@ -1,25 +1,25 @@
 <?php
-session_start();
-if(!isset($_SESSION["login_admin"]))
-{
-    die("NOT Authenticated !");
-}
-if(isset($_SESSION["login"]))
-{
-    session_destroy();
-    unset($_SESSION['login']);
-    session_unset();
-    session_abort();
     session_start();
-}
-if(!isset($_POST['approve_users_1']))
-{
-    die("No Options Chosen !");
-}
-if(!isset($_POST['submit']))
-{
-    die("Please Go Back and choose the correct options !");
-}
+    if(!isset($_SESSION["login_admin"]))
+    {
+        die("NOT Authenticated! Go to <a href='admin_login.html'>admin login entrypoint</a>!");
+    }
+    if(isset($_SESSION["login"]))
+    {
+        session_destroy();
+        unset($_SESSION['login']);
+        session_unset();
+        session_abort();
+        session_start();
+    }
+    if(!isset($_POST['approve_users_1']))
+    {
+        die("No Options Chosen! Click&nbsp;<a href='admin_loggedin.php'>here</a>&nbsp;to go back to admin dashboard.");
+    }
+    if(!isset($_POST['submit']))
+    {
+        die("Please Go&nbsp;<a href='admin_loggedin.php'>back</a>&nbsp;and choose the correct options !");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +27,15 @@ if(!isset($_POST['submit']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/most-basic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    
     <title>Updating User's Data</title>
 </head>
 <body>
+    <div class="simple-box">
     <?php
         $servername = $_SERVER['SERVER_NAME'];
         $username="root";
@@ -49,5 +55,7 @@ if(!isset($_POST['submit']))
         }
         echo "All users who applied for vaccination dose 1 are Updated !";
     ?>
+    Click&nbsp;<a href='admin_loggedin.php'>here</a>&nbsp;to go back to admin dashboard.
+    </div>
 </body>
 </html>

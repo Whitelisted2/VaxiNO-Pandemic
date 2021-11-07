@@ -1,10 +1,5 @@
-html{
-    height:100%;
-}
-
 body{
     color:ivory;
-    height: 100% ;
     background-image: url(../images/dashbg.jpg);
     background-size: auto;
     background-attachment: fixed;
@@ -20,17 +15,19 @@ body{
     text-align:left;
     font-family: 'Nunito', sans-serif;
     font-size:x-large;
+    width:80%;
 }
+
 .main{
     display:block;
 }
 .main:after{
-    content:"";
-    clear: both;
+    clear:both;
 }
+
 .left{
-    background-color: #140375;
-    color: #D4D6C9;
+    background-image:linear-gradient(to bottom right, rgb(0, 140, 255), rgb(78, 78, 214));
+    color: #ffffff;
     display:block;
     float: left;
     width: 58%;
@@ -59,14 +56,14 @@ body{
 }
 
 .right{
-    background-color: #136b10;
-    color: #D6CBC9;
+    background-color: #770063;
+    color: #f9fffb;
     float: right;
     min-height: 60%;
     display:block;
-    width: 33%;
+    width: 31%;
     margin-right:1%;
-    padding:1%;
+    padding:2%;
 }
 
 .right img{
@@ -88,31 +85,47 @@ button:hover{
 }
 
 footer{
-    padding:0.5%;
-    display:block;
-    float:center;
-    text-align:center;
-    margin-left: 1%;
-    margin-right:1%;
-    width:96%;
+    display:flex;
     background-color:rgb(8, 207, 8);
-    position:absolute;
-    color:rgb(255, 255, 255);
-    bottom:0;
+    color:darkblue;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    width:98%;
+    margin-left:1%;
+    margin-top:1%;
+    position: relative;
+    
 }
 .cert-block{
     display:block;
-    background-color: lightgreen;
+    background-image:linear-gradient(to bottom right, lightgreen, lightblue);
     color:rgb(255, 0, 51);
     float:left;
     width:58%;
     margin-left:1%;
-    margin-top:2%;
+    margin-top:1%;
+    margin-bottom: 1%;
     padding:2%;
 }
 
 .curr-details td{
     font-family: 'Merriweather', serif;
+}
+*.after{
+    content:"";
+    clear:both;
+}
+
+.squareright{
+    float:right;
+    display: block;
+    background-color: darkorange;
+    width:33%;
+    margin-right:1%;
+    padding:1%;
+    margin-top:1%;
+    margin-bottom:1%;
+    text-align: center;
 }
 
 /**************ADMIN DASH CSS******************/

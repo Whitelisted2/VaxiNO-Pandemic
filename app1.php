@@ -15,9 +15,14 @@ if(!isset($_POST['submit']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/most-basic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
     <title>Booking Appointment 1</title>
 </head>
 <body>
+    <div class="simple-box">
     <?php
         if($_SESSION["age_user"]<18)
         {
@@ -47,7 +52,7 @@ if(!isset($_POST['submit']))
         $row = mysqli_fetch_assoc($result);
         if($row["app1_approval_user"]==1)
         {
-            echo "User already requested for an appointment for vaccination !";
+            echo "User already requested for an appointment for vaccination !\n";
         }
         else
         {
@@ -55,8 +60,8 @@ if(!isset($_POST['submit']))
             $result = mysqli_query($conn, $command);
             if($result)
             {
-                echo "Your request for appointment for vaccination dose 1 has been made\n";
-                echo "Please wait for Administrator to approve it.";
+                echo "Your request for appointment for vaccination dose 1 has been made.\n";
+                echo "Please wait for Administrator to approve it.\n";
                 $_SESSION["app1_approval_user"]=1;
             }
             else
@@ -65,5 +70,7 @@ if(!isset($_POST['submit']))
             }
         }
     ?>
+    Click&nbsp;<a href='loggedin.php'>here</a>&nbsp;to go back to your dashboard
+    </div>
 </body>
 </html>

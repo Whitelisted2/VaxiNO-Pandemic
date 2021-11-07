@@ -15,13 +15,18 @@ if(isset($_SESSION["login_admin"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/most-basic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
     <title>Logging You In !</title>
 </head>
 <body>
+    <div class="simple-box">
     <?php
     if(!(isset($_POST["phnum"]) && isset($_POST["pass"])))
     {
-        die("Please go back and Login Valid Credentials !!!");
+        die("Please go <a href='user_login_signup.html'>back</a> and Login using Valid Credentials !!!");
     }
 
     $servername = $_SERVER['SERVER_NAME'];
@@ -62,12 +67,13 @@ if(isset($_SESSION["login_admin"]))
         $_SESSION["app2_approval_user"]=$row["app2_approval_user"];
         $_SESSION["vac2_approval_user"]=$row["vac2_approval_user"];
         echo "You are Logged in !<br/>";
-        echo '<a href="loggedin.php">Click here</a> to go to your dashboard to book a vaccine slot !';
+        header("location: loggedin.php");
     }
     else{
         // invalid credentials
-        die("Please enter valid Ph. No. and password !");
+        die("Please&nbsp;<a href='user_login_signup.html'>try again</a>,&nbsp;and enter correct credentials !");
     }
     ?>
+    </div>
 </body>
 </html>

@@ -1,0 +1,12 @@
+.simple-box{
+    display: flex;
+    padding: 20px;
+    background-color:dodgerblue;
+    color:black;
+    box-sizing: border-box;
+    width:100%;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color:lime;
+}
