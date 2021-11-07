@@ -16,7 +16,7 @@ if(!isset($_SESSION["login"]))
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Profile/Account</title>
-        <link rel="stylesheet" href="css/part1.css">
+        <link rel="stylesheet" href="css/dashlayout_user.css">
     </head>
     <body>
         <div class="top" height="40px">
