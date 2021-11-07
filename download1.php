@@ -25,7 +25,23 @@ if(isset($_SESSION["login_admin"]))
     <title>Certificate Dose 1</title>
 </head>
 <body>
-    Hello World !!!<br/>
+    <h2><center><strong>Certificate of <emp>Vaccination(Dose 1)</emp></strong></center></h2><br/>
+    <center>
+        It is to hereby certify that <?php echo $_SESSION["name_user"]; ?> has been vaccinated(dose 1).
+    </center></br>
+    <br/>
+    <p style="text-align: left;">
+    Name : <?php echo $_SESSION["name_user"]; ?><br/>
+    Age : <?php echo $_SESSION["age_user"]; ?><br/>
+    Phone No. : <?php echo $_SESSION["phnum_user"]; ?><br/>
+    Pincode : <?php echo $_SESSION["pincode_users"]; ?><br/>
+    Email : <?php echo $_SESSION["email_user"]; ?><br/>
+    </p>
+    <br/>
+    <p style="text-align: right;">
+    VaxiNO'Pandemic<br/>
+    Signature
+    </p>
     <a href="#" onclick="window.print()"> click here to Print</a>
 </body>
 </html>
