@@ -49,11 +49,11 @@ if(isset($_SESSION["login"]))
         $row=mysqli_fetch_assoc($result);
         while($row)
         {
-            echo "<tr><td><input type='checkbox'></td><td>".$row['name_user']."</td><td>".$row['age_user']."</td></tr>";
+            echo "<tr><td><input type='checkbox' name='approve_users_1[]' value=".$row['phnum_user']."></td><td>".$row['name_user']."</td><td>".$row['age_user']."</td></tr>";
             $row=mysqli_fetch_assoc($result);
         }
         echo "</table>";
-        echo "<br/><input type='button' name='submit' value='Approve as Vaccinated Dose 1'>";
+        echo "<br/><button name='submit'>Approve as Vaccinated Dose 1</button>";
         echo "</form>";
 
         echo "<hr>";
@@ -67,11 +67,11 @@ if(isset($_SESSION["login"]))
         $row=mysqli_fetch_assoc($result);
         while($row)
         {
-            echo "<tr><td><input type='checkbox'></td><td>".$row['name_user']."</td><td>".$row['age_user']."</td></tr>";
+            echo "<tr><td><input type='checkbox' name='approve_users_2[]' value=".$row['phnum_user']."></td><td>".$row['name_user']."</td><td>".$row['age_user']."</td></tr>";
             $row=mysqli_fetch_assoc($result);
         }
         echo "</table>";
-        echo "<br/><input type='button' name='submit' value='Approve as Vaccinated Dose 1'>";
+        echo "<br/><button name='submit'>Approve as Vaccinated Dose 2</button>";
         echo "</form>";
     ?>
 </body>

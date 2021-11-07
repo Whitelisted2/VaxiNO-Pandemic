@@ -51,7 +51,7 @@ if(!isset($_POST['submit']))
         }
         else
         {
-            $command = "UPDATE usertable SET app2_approval_user='2' WHERE phnum_user='$phnum_user'" ;
+            $command = "UPDATE usertable SET app2_approval_user='1' WHERE phnum_user='$phnum_user'" ;
             $result = mysqli_query($conn, $command);
             if($result)
             {
