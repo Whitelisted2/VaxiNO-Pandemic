@@ -20,7 +20,7 @@ link to webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/
 
 
 # Instructions for proper functioning of the website
--1.
-  -1.1 Install XAMPP on your PC. To download it click here(https://www.apachefriends.org/download.html)
-  -1.2 You must then switch on the Apache and MySQL modules in the xampp control panel.
--2. 
+- XAMPP
+  - 1.1 Install XAMPP on your PC. To download it click here(https://www.apachefriends.org/download.html)
+  - 1.2 You must then switch on the Apache and MySQL modules in the xampp control panel.
+- 2
