@@ -31,10 +31,10 @@ if(!isset($_SESSION["login"]))
                 <br/>
                 <div class="details">
                     <div id="name">Name&nbsp;:&nbsp;<span class="user_name"><?php echo $_SESSION["name_user"] ?></span></div>
-                    <div id="age">Age&nbsp;:&nbsp;<?php echo $_SESSION["age_user"]??"Not Known" ?></div>
+                    <div id="age">Age&nbsp;:&nbsp;<?php echo $_SESSION["age_user"]?></div>
                     <br/>
-                    <div id="approved">Approved for appointment 1&nbsp;:&nbsp;<?php echo $_SESSION["app1_approval_user"]==1?"Approved":"NOT Approved" ?></div>
-                    <div id="approved">Approved for appointment 2&nbsp;:&nbsp;<?php echo $_SESSION["app2_approval_user"]==1?"Approved":"NOT Approved" ?></div>
+                    <div id="approved">Approved for appointment 1&nbsp;:&nbsp;<?php echo $_SESSION["vac1_approval_user"]==1?"Approved":"NOT Approved" ?></div>
+                    <div id="approved">Approved for appointment 2&nbsp;:&nbsp;<?php echo $_SESSION["vac2_approval_user"]==1?"Approved":"NOT Approved" ?></div>
                 </div>
                 <br/>
                 <hr>
@@ -65,21 +65,19 @@ if(!isset($_SESSION["login"]))
                 <div class="curr-details">
                     <center>Current Details</center>
                     Name : <?php echo $_SESSION["name_user"] ?><br/>
-                    Age :<br/>
-                    DOB :<br/>
-                    ID No. :<br/>
+                    Age : <?php echo $_SESSION["age_user"] ?><br/>
                     Pincode : <?php echo $_SESSION["pincode_users"] ?><br/>
                     Ph. No. : <?php echo $_SESSION["phnum_user"] ?><br/>
                     E-Mail : <?php echo $_SESSION["email_user"] ?><br/>
-                    Profile-Pic :<br/>
-                    <button value="Change Details">Change Details</button>
+                    <!-- <button value="Change Details">Change Details</button> -->
+                    <!-- UPDATION OF DETAILS PAGE CAN BE MADE LATER IF TIME ALLOWS -->
                 </div>
             </div>
             <!-- <button action="app1.php">Book Appointment 1</button><br/>
             <button action="app2.php">Book Appointment 2</button><br/> -->
             <?php
             if($_SESSION["app1_approval_user"]==0){
-                echo "<button action='app1.php'>Book Appointment 1</button><br/>";
+                echo "<form action='app1.php' method='POST'><button name='submit'>Book Appointment 1</button></form><br/>";
             }
             else if($_SESSION["app1_approval_user"]==1 && $_SESSION["vac1_approval_user"]==1){
                 echo "<button action='app2.php'>Book Appointment 2</button><br/>";

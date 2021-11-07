@@ -51,9 +51,11 @@
         $email_user=trim($_POST["email"]);
         $pincode_user=$_POST["pincode"];
         $name_user=trim($_POST["name"]);
+        $age=$_POST["age"]
 
         $command="CREATE TABLE IF NOT EXISTS usertable (
             name_user VARCHAR(50) NOT NULL, 
+            age_user INT(3) NOT NULL, 
             phnum_user BIGINT(12) NOT NULL PRIMARY KEY, 
             password_user VARCHAR(50) NOT NULL, 
             email_user VARCHAR(70) NOT NULL, 
@@ -76,7 +78,7 @@
             die("This Phone number is already registered !");
         }
 
-        $command = "INSERT INTO usertable values ('$name_user', '$phnum_user', '$password_user', '$email_user', '$pincode_user', 0, 0, 0, 0)";
+        $command = "INSERT INTO usertable values ('$name_user', '$age', '$phnum_user', '$password_user', '$email_user', '$pincode_user', 0, 0, 0, 0)";
         $result = mysqli_query($conn, $command);
         if(!$result){
             die("Record Not added ! Please try again. error : ".mysqli_error($conn));

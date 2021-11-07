@@ -45,6 +45,7 @@ session_start()
         // user logged in
         $_SESSION["login"]=1;
         $_SESSION["name_user"]=$row["name_user"];
+        $_SESSION["age_user"]=$row["age_user"];
         $_SESSION["phnum_user"]=$row["phnum_user"];
         $_SESSION["email_user"]=$row["email_user"];
         $_SESSION["pincode_users"]=$row["pincode_users"];
