@@ -48,7 +48,7 @@ if(isset($_SESSION["login_admin"]))
                 </a>
             </div>
             <div class="cloumn-flexing">
-                <span><a class="nav-list"><b>Profile Page</b></a></span> &emsp;&emsp;&emsp;&emsp;
+                <span><a class="nav-list"><b>User Dashboard</b></a></span> &emsp;&emsp;&emsp;&emsp;
                 <span><a class="nav-list" href="index.html">Home</a></span>
                 <span><a class="nav-list" href="team_members.html">Members</a></span>
                 <span><a class="nav-list" href="proj_overview.html">Overview</a></span>
@@ -166,6 +166,7 @@ if(isset($_SESSION["login_admin"]))
             }
             ?>
         </div>
+        
         <footer>
             &copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)
             <!--<a href="mailto:vaxinopandemic@gmail.com">E-Mail Address</a><br/>

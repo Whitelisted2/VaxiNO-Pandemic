@@ -114,3 +114,27 @@ footer{
 .curr-details td{
     font-family: 'Merriweather', serif;
 }
+
+/**************ADMIN DASH CSS******************/
+
+.left-half{
+    width:45%;
+    float:left;
+    display:block;
+    margin-left:2%;
+    background-image: linear-gradient(to bottom right, rgb(51, 51, 187), rgb(238, 89, 89));
+    min-height: 300px;
+}
+
+.right-half{
+    width:45%;
+    float:right;
+    display:block;
+    margin-right:2%;
+    background-image: linear-gradient(to bottom right, rgb(131, 218, 60), rgb(186, 42, 190));
+    min-height: 300px;
+}
+*.after{
+    content:"";
+    clear:both;
+}
