@@ -1,26 +1,28 @@
-# Intended to contain files related to SSL Course Project
-VaxiNO'Pandemic is a portal to enable faster management of the ongoing vaccination drive.
-We intend to make it efficient, user-friendly, and informative.
 
-## Work In Progress!!!
-![Logo Image](/images/dark_logo.png)
+![Logo Image](/images/light_logo.png)
 
 ## Technologies used:
-- LaTeX/\*Beamer
-- HTML/CSS
-- Javascript
-- PHP
-- SQL
-- Git
-- Python
+This project has been created and maintained using the following tools:
+- VSCode: as an IDE
+- Chrome: as a Browser
+- LaTeX: for Reports
+- HTML/CSS: for Layout and Appearance
+- Javascript: to make onClick() tools
+- PHP/mySQL: as a DBMS
+- Git/GitHub: for Collaboration and Version Control
+- Python/Shell: in Generation of Graphs from data
 
-[\* To be implemented]
-
-link to webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ 
+Link to the GitHub Webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ (does not run features related to PHP/Databases)
 
 
-# Instructions for proper functioning of the website
+## Instructions for Setup and Installation
 - XAMPP
-  - 1.1 Install XAMPP on your PC. To download it click here(https://www.apachefriends.org/download.html)
-  - 1.2 You must then switch on the Apache and MySQL modules in the xampp control panel.
-- 2
+  - Install XAMPP on your PC. To download it, click [here](https://www.apachefriends.org/download.html).
+  - Then, switch on the ```Apache``` and ```MySQL``` modules in the XAMPP control panel.
+  - Place all the files of this project within a folder, 'VaxiNO-Pandemic', in the ```htdocs``` folder of the XAMPP directory in file explorer.
+  - Open any browser and navigate to ```localhost/VaxiNO-Pandemic```.
+  - The website is now up and running. Make sure all files and subfolders related to this project are present within the 'VaxiNO-Pandemic' folder, that's in ```htdocs```.
+- Python
+  - Download the latest version of Python from [here](https://www.python.org/downloads/).
+  - Using PIP, install the libraries ```matplotlib``` and ```requests```.
+  - (For the program to be able to connect to the Online API, make sure that the system is connected to the Internet throughout.)
