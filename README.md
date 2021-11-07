@@ -7,7 +7,7 @@ This project has been created and maintained using the following tools:
 - Chrome: as a Browser
 - LaTeX: for Reports
 - HTML/CSS: for Layout and Appearance
-- Javascript: to make onClick() tools
+- Javascript: to make ```onClick()``` tools
 - PHP/mySQL: as a DBMS
 - Git/GitHub: for Collaboration and Version Control
 - Python/Shell: in Generation of Graphs from data
