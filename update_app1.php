@@ -14,6 +14,10 @@ if(isset($_SESSION["login"]))
     // header("location: index.html");
     session_start();
 }
+if(!isset($_POST['approve_users_1']))
+{
+    die("No Options Chosen !");
+}
 if(!isset($_POST['submit']))
 {
     die("Please Go Back and choose the correct options !");

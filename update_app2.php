@@ -18,6 +18,10 @@ if(!isset($_POST['submit']))
 {
     die("Please Go Back and choose the correct options !");
 }
+if(!isset($_POST['approve_users_2']))
+{
+    die("No Options Chosen !");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
