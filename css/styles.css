@@ -111,6 +111,11 @@ a {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
+.heading-box{
+    text-align:center;
+    position:absolute;
+    margin-top:-50px;
+}
 .profile-box {
     color: aliceblue;
     display: flex;
