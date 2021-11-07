@@ -2,7 +2,12 @@
 session_start();
 if(isset($_SESSION["login_admin"]))
 {
-    die("Please Log out of the Admin Account !");
+    // die("Please Log out of the Admin Account !");
+    session_destroy();
+    unset($_SESSION['login_admin']);
+    session_unset();
+    session_abort();
+    session_start();
 }
 ?>
 <!DOCTYPE html>

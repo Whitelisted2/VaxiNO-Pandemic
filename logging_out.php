@@ -4,5 +4,5 @@ session_destroy();
 unset($_SESSION['login']);
 session_unset();
 session_abort();
-header("location: index.html")
+header("location: index.html");
 ?>
