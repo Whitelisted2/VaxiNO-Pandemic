@@ -46,7 +46,7 @@ if(isset($_SESSION["login"]))
 
     $id_admin=$_POST["admin_id"];
     $password_admin=trim($_POST["pass"]);
-
+    
     $command="CREATE TABLE IF NOT EXISTS admintable (
         name_admin VARCHAR(50) NOT NULL, 
         id_admin BIGINT(12) NOT NULL PRIMARY KEY, 
@@ -87,7 +87,7 @@ if(isset($_SESSION["login"]))
     }
     else{
         // invalid credentials
-        die("Please&nbsp;<a href='admin_login.php'>try again</a>&nbsp;and enter valid Admin ID and password !");
+        die("Please&nbsp;<a href='admin_login.html'>try again</a>&nbsp;and enter valid Admin ID and password !");
     }
     
     // header("location : admin_loggedin.html")

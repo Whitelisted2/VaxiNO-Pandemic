@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION["login_admin"]))
 {
-    die("NOT Authenticated !");
+    die("NOT Authenticated! Go to <a href='admin_login.html'>admin login entrypoint</a>!");
 }
 if(isset($_SESSION["login"]))
 {
@@ -53,6 +53,12 @@ if(isset($_SESSION["login"]))
         th, td{
             font-family: 'Rubik', sans-serif;
             padding:2px;
+        }
+        footer{
+            bottom: 0;
+            display:block;
+            position:absolute;
+            text-align:center;
         }
     </style>
 </head>
@@ -122,5 +128,8 @@ if(isset($_SESSION["login"]))
         echo "</form>";
         echo "</fieldset></div>";
     ?>
+    <footer>
+		&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)
+	</footer>
 </body>
 </html>

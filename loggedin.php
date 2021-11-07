@@ -4,7 +4,7 @@ session_start();
 <?php
 if(!isset($_SESSION["login"]))
 {
-    die("Not Authenticated!!!");
+    die("NOT Authenticated! Go to <a href='user_login_signup.html'>login entrypoint</a>!");
 }
 if(isset($_SESSION["login_admin"]))
 {

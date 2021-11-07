@@ -12,14 +12,7 @@ if(isset($_SESSION["login"]))
     session_abort();
     session_start();
 }
-if(!isset($_POST['approve_users_2']))
-{
-    die("No Options Chosen! Click&nbsp;<a href='admin_loggedin.php'>here</a>&nbsp;to go back to admin dashboard.");
-}
-if(!isset($_POST['submit']))
-{
-    die("Please Go&nbsp;<a href='admin_loggedin.php'>back</a>&nbsp;and choose the correct options !");
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +29,14 @@ if(!isset($_POST['submit']))
 <body>
     <div class="simple-box">
     <?php
+        if(!isset($_POST['approve_users_2']))
+        {
+            die("No Options Chosen! Click&nbsp;<a href='admin_loggedin.php'>here</a>&nbsp;to go back to admin dashboard.");
+        }
+        if(!isset($_POST['submit']))
+        {
+            die("Please Go&nbsp;<a href='admin_loggedin.php'>back</a>&nbsp;and choose the correct options !");
+        }
         $servername = $_SERVER['SERVER_NAME'];
         $username="root";
         $password="";
