@@ -57,7 +57,11 @@
             phnum_user BIGINT(12) NOT NULL PRIMARY KEY, 
             password_user VARCHAR(50) NOT NULL, 
             email_user VARCHAR(70) NOT NULL, 
-            pincode_users INT(6) NOT NULL)";
+            pincode_users INT(6) NOT NULL, 
+            app1_approval_user INT(3) DEFAULT '0', 
+            vac1_approval_user INT(3) DEFAULT '0', 
+            app2_approval_user INT(3) DEFAULT '0', 
+            vac2_approval_user INT(3) DEFAULT '0')";
         
         $result = mysqli_query($conn, $command);
         if(!$result){
@@ -72,7 +76,7 @@
             die("This Phone number is already registered !");
         }
 
-        $command = "INSERT INTO usertable values ('$name_user', '$phnum_user', '$password_user', '$email_user', '$pincode_user')";
+        $command = "INSERT INTO usertable values ('$name_user', '$phnum_user', '$password_user', '$email_user', '$pincode_user', 0, 0, 0, 0)";
         $result = mysqli_query($conn, $command);
         if(!$result){
             die("Record Not added ! Please try again. error : ".mysqli_error($conn));

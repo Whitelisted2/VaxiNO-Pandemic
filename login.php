@@ -48,6 +48,10 @@ session_start()
         $_SESSION["phnum_user"]=$row["phnum_user"];
         $_SESSION["email_user"]=$row["email_user"];
         $_SESSION["pincode_users"]=$row["pincode_users"];
+        $_SESSION["app1_approval_user"]=$row["app1_approval_user"];
+        $_SESSION["vac1_approval_user"]=$row["vac1_approval_user"];
+        $_SESSION["app2_approval_user"]=$row["app2_approval_user"];
+        $_SESSION["vac2_approval_user"]=$row["vac2_approval_user"];
         echo "You are Logged in !<br/>";
         echo '<a href="loggedin.php">Click here</a> to go to your dashboard to book a vaccine slot !';
     }
