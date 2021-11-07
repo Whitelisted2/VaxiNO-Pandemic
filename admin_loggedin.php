@@ -41,7 +41,7 @@ if(isset($_SESSION["login"]))
         echo "<hr>";
 
         echo "Users to be approved for Dose 1 :-<br/><br/>";
-        $command = "SELECT * FROM usertable WHERE app1_approval_user=1";
+        $command = "SELECT * FROM usertable WHERE app1_approval_user=1 && vac1_approval_user=0";
         $result = mysqli_query($conn, $command);
         echo "<form action='update_app1.php' method='POST'>";
         echo "<table>";
@@ -59,7 +59,7 @@ if(isset($_SESSION["login"]))
         echo "<hr>";
 
         echo "Users to be approved for Dose 2 :-<br/><br/>";
-        $command = "SELECT * FROM usertable WHERE app2_approval_user=1";
+        $command = "SELECT * FROM usertable WHERE app2_approval_user=1 && vac2_approval_user=0";
         $result = mysqli_query($conn, $command);
         echo "<form action='update_app2.php' method='POST'>";
         echo "<table>";
