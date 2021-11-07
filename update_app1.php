@@ -6,12 +6,10 @@ if(!isset($_SESSION["login_admin"]))
 }
 if(isset($_SESSION["login"]))
 {
-    // die("Please Log out of the User Account !");
     session_destroy();
     unset($_SESSION['login']);
     session_unset();
     session_abort();
-    // header("location: index.html");
     session_start();
 }
 if(!isset($_POST['approve_users_1']))
@@ -46,7 +44,6 @@ if(!isset($_POST['submit']))
         $result = mysqli_query($conn, $command);
 
         foreach($_POST["approve_users_1"] as $each_phnum_user){
-            // echo $each_phnum_user."<br/>";
             $command = "UPDATE usertable SET vac1_approval_user=1 WHERE phnum_user=".$each_phnum_user ;
             $result = mysqli_query($conn, $command);
         }

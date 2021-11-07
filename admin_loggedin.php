@@ -6,12 +6,10 @@ if(!isset($_SESSION["login_admin"]))
 }
 if(isset($_SESSION["login"]))
 {
-    // die("Please Log out of the User Account !");
     session_destroy();
     unset($_SESSION['login']);
     session_unset();
     session_abort();
-    // header("location: index.html");
     session_start();
 }
 ?>

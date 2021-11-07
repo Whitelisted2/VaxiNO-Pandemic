@@ -1,6 +1,5 @@
 <?php
 session_start();
-// $user_info_json = json_encode($_SESSION);
 ?>
 <?php
 if(!isset($_SESSION["login"]))
@@ -9,7 +8,6 @@ if(!isset($_SESSION["login"]))
 }
 if(isset($_SESSION["login_admin"]))
 {
-    // die("Please Log out of the Admin Account !");
     session_destroy();
     unset($_SESSION['login_admin']);
     session_unset();
@@ -85,8 +83,6 @@ if(isset($_SESSION["login_admin"]))
                     }
                     else if($_SESSION["vac1_approval_user"]==1)
                     {
-                        // echo "Download Certificate<br/>";
-                        // echo "<img src='' width='90%'' height='80%''><br/>";
                         echo "<a href='download1.php'><button value='Download' id='download'>Download</button></a>";
                     }
                     ?>
@@ -145,9 +141,6 @@ if(isset($_SESSION["login_admin"]))
                 </div>
             </div>
             
-            <!-- <button action="app1.php">Book Appointment 1</button><br/>
-            <button action="app2.php">Book Appointment 2</button><br/> -->
-            
         </div>
         <div class="cert-block">
             <?php
@@ -169,13 +162,6 @@ if(isset($_SESSION["login_admin"]))
         
         <footer>
             &copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)
-            <!--<a href="mailto:vaxinopandemic@gmail.com">E-Mail Address</a><br/>
-            <a href="tel:9999999999">Phone Number</a>-->
         </footer>
-        <!-- <script>
-            function check_approval(){
-                if(<?php //echo ($_SESSION["init_app_approval_user"]==1)?"1":"0" ; ?>){document.getElementById("download").setAttribute("disabled", "disabled");}
-            }
-        </script> -->
     </body>
 </html>

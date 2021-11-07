@@ -30,9 +30,6 @@
         {
             die("Database allusers NOT created ! error : ".mysqli_error($conn)."<br/>");
         }
-        // $database="allusers";
-        // $conn=mysqli_connect($servername, $username, $password, $database);
-        // echo "control is here !";
 
         $command = "use allusers";
         $result = mysqli_query($conn, $command);
@@ -70,7 +67,7 @@
             die("Table Not created ! error : ".mysqli_error($conn)."<br/>");
         }
 
-        // also check for previous phnum which should not be same as the new added one !!!
+        // DONE LATER - also check for previous phnum which should not be same as the new added one !!!
         $phnumcheck=$_POST["phnum"];
         $sql="SELECT * FROM usertable WHERE phnum_user='$phnumcheck'";
         $result = mysqli_query($conn, $sql);
