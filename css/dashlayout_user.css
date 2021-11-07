@@ -1,66 +1,102 @@
+html{
+    height:100%;
+}
 body{
-    
-    color: #D6D1C9;
-    background-image: url(/images/dashbg.jpg);
+    color:ivory;
+    height: 100% ;
+    background-image: url(../images/dashbg.jpg);
+    background-size: auto;
+    background-attachment: fixed;
 }
 
-.top{
-    float:inline-start;
-    font-size: 200%;
-}
-#heading{
-    float: left;
-    width: 80%;
-}
-#personal-header{
+.personal-header{
     float: right;
-    width: 20%;
+    box-sizing: border-box;
     text-align: right;
 }
 
-
-.left{
-    background-color: #2b2936;
-    color: #D4D6C9;
-    float: left;
-    width: 80%;
+.main{
+    display:block;
 }
-#name{
+.main:after{
+    content:"";
+    clear: both;
+}
+.left{
+    background-color: #140375;
+    color: #D4D6C9;
+    display:block;
+    float: left;
+    width: 60%;
+    padding: 10px;
+    margin-left:1%;
+}
+.name{
     float: left;
     height: 50%;
     width: 50%;
 }
-#age{
+.age{
     float: left;
     height: 50%;
     width: 50%
 }
-#ref-no{
+.ref-no{
     float: right;
     height: 50%;
     width: 50%
 }
-#approved{
+.approved{
     float: right;
     height: 50%;
     width: 50%
 }
-
-
 
 .right{
-    background-color: #293436;
+    background-color: #136b10;
     color: #D6CBC9;
     float: right;
-    width: 20%;
+    min-height: 60%;
+    display:block;
+    width: 33%;
+    margin-right:1%;
+    padding:1%;
 }
-.vacc-stat{
-    text-align: center;
+
+.right img{
+    float:right;
 }
 
+.right button{
+    font-style: italic;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
 
+.nav-list b{
+    font-style: italic;
+}
 
-
-.footer{
-    margin-top: 5px;
+footer{
+    padding:0.5%;
+    display:block;
+    float:center;
+    text-align:center;
+    margin-left: 1%;
+    margin-right:1%;
+    width:96%;
+    background-color:rgb(8, 207, 8);
+    position:absolute;
+    color:rgb(255, 255, 255);
+    bottom:0;
+}
+.cert-block{
+    display:block;
+    background-color: lightgreen;
+    color:rgb(255, 0, 51);
+    float:left;
+    width:57%;
+    margin-left:1%;
+    margin-top:2%;
+    padding:2%;
 }
