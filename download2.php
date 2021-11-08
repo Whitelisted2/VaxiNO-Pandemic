@@ -27,7 +27,7 @@ if(isset($_SESSION["login_admin"]))
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <title>Certificate Dose 1</title>
+    <title>Certificate Dose 2</title>
     <style>
         body{
             padding:2%;

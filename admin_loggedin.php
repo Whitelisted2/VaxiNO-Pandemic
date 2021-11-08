@@ -26,7 +26,7 @@ if(isset($_SESSION["login"]))
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <title>Admin Logged in</title>
+    <title>Admin Dashboard</title>
     <style>
         fieldset{
             min-height:300px;
