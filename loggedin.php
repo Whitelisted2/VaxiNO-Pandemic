@@ -70,13 +70,13 @@ if(isset($_SESSION["login_admin"]))
                     <div id="name">Name :&nbsp;<span class="user_name"><?php echo $_SESSION["name_user"] ?></span></div>
                     <div id="age">Age&emsp;:&nbsp;<span><?php echo $_SESSION["age_user"]?></span></div>
                     <br/>
-                    <div id="approved">Approved for appointment 1&nbsp;:&nbsp;<?php echo $_SESSION["vac1_approval_user"]==1?"Approved":"NOT Approved" ?></div>
-                    <div id="approved">Approved for appointment 2&nbsp;:&nbsp;<?php echo $_SESSION["vac2_approval_user"]==1?"Approved":"NOT Approved" ?></div>
+                    <div id="approved">Vaccine Dose 1 Status&nbsp;:&nbsp;<?php echo $_SESSION["vac1_approval_user"]==1?"Vaccinated":"NOT Vaccinated" ?></div>
+                    <div id="approved">Vaccine Dose 2 Status&nbsp;:&nbsp;<?php echo $_SESSION["vac2_approval_user"]==1?"Vaccinated":"NOT Vaccinated" ?></div>
                 </div>
                 <br/>
                 <hr>
-                
             </div>
+            
             <div class="right">
                 <div class="greeting">
                     Hi, <span class="user_name">
@@ -130,6 +130,7 @@ if(isset($_SESSION["login_admin"]))
             </div>
             
         </div>
+        
         <div class="cert-block">
             <h2> Vaccine Certificate Status </h2>
             <?php
@@ -145,6 +146,26 @@ if(isset($_SESSION["login_admin"]))
             }
             else{
                 echo "Please wait for administrator to update the status of your appointment/vaccination.";
+            }
+            ?>
+            <hr>
+            <h2> View Slots at Centres Near You </h2>
+            <?php
+            if(($_SESSION["app1_approval_user"] == 1) && ($_SESSION["vac1_approval_user"] == 0) )
+            {
+                echo "<a href='slots_aval.php'><button>View Slots</button></a>";
+            }
+            else if(($_SESSION["app2_approval_user"] == 1) && ($_SESSION["vac2_approval_user"] == 0) )
+            {
+                echo "<a href='slots_aval.php'><button>View Slots</button></a>";
+            }
+            else if((($_SESSION["vac1_approval_user"] == 1) && ($_SESSION["app2_approval_user"] == 0))||($_SESSION["app1_approval_user"] == 0))
+            {
+                echo "Please apply for dose to view slots.";
+            }
+            else if(($_SESSION["vac1_approval_user"] == 1) && ($_SESSION["vac2_approval_user"] == 1))
+            {
+                echo "You have been completely vaccinated!";
             }
             ?>
             <hr>
@@ -167,6 +188,7 @@ if(isset($_SESSION["login_admin"]))
                 ?>
             </div>
         </div>
+        
         <div class="squareright">
             <img src="images/get-vacc.jpg" width="80%">
         </div>

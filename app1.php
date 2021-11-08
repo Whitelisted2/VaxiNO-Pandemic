@@ -62,6 +62,7 @@ if(!isset($_POST['submit']))
             {
                 echo "Your request for appointment for vaccination dose 1 has been made.\n";
                 echo "Please wait for Administrator to approve it.\n";
+                echo "You can view slots at centres in your pin code.\n";
                 $_SESSION["app1_approval_user"]=1;
             }
             else
