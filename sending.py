@@ -11,14 +11,21 @@ response = req.get("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public
 all_centers = response.json()
 
 all_centers = all_centers["centers"]
-print("total centers available around you : "+str(len(all_centers))+"<br/><br/>")
+print("Total no. of centers available around you : "+str(len(all_centers))+"<br/><br/>")
 print("List of all Center Names Around you :-<br/>")
+print("<ol>")
 for each_center in all_centers:
-    print("center name : "+str(each_center['name'])+"<br/>")
-    print("center address : "+str(each_center['address'])+", "+str(each_center['block_name'])+"<br/>")
-    print("Timings for center open : "+str(each_center['from'])+"-"+str(each_center['to']))
+    print("<li>")
+    print("Center name : "+str(each_center['name'])+"<br/>")
+    print("Center address : "+str(each_center['address'])+", "+str(each_center['block_name'])+"<br/>")
+    print("Timings for center open : "+str(each_center['from'])+"-"+str(each_center['to'])+"<br/>")
+    print("Vaccines Available on this center :-")
     print("<ul>")
     for diff_vaccines in each_center['sessions']:
-        print("<li>"+str(diff_vaccines['vaccine'])+" Capacity dose 1: "+str(diff_vaccines['available_capacity_dose1'])+"</li><br/>")
-        print("<li>"+str(diff_vaccines['vaccine'])+" Capacity dose 2: "+str(diff_vaccines['available_capacity_dose2'])+"</li><br/><br/>")
+        print("<li>"+str(diff_vaccines['vaccine'])+" Capacity dose 1: "+str(diff_vaccines['available_capacity_dose1'])+"</li>")
+        print("<li>"+str(diff_vaccines['vaccine'])+" Capacity dose 2: "+str(diff_vaccines['available_capacity_dose2'])+"</li>")
+        print("<li>Minimum age limit : "+str(diff_vaccines['min_age_limit'])+"</li><br/>")
     print("</ul>")
+    print("<br/><br/>")
+    print("</li>")
+print("</ol>")

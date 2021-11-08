@@ -22,6 +22,8 @@ if(isset($_SESSION["login_admin"]))
     <title>SLOTS</title>
 </head>
 <body>
+    <a href="javascript:history.back()"><button>Back</button><a/>
+    <br/>
     <?php
     $res = shell_exec("python sending.py ".$_SESSION['pincode_users']);
     echo $res;
