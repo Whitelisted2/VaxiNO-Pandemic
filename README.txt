@@ -1,5 +1,5 @@
 
-****************Project: VaxiNO'Pandemic****************
+*********************Project: VaxiNO'Pandemic*********************
 
 ## Instructions for Setup and Installation
 - XAMPP
