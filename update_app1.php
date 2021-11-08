@@ -53,8 +53,8 @@
         foreach($_POST["approve_users_1"] as $each_phnum_user){
             $command = "UPDATE usertable SET vac1_approval_user=1 WHERE phnum_user=".$each_phnum_user ;
             $result = mysqli_query($conn, $command);
-            $dtes_vac = date("Y-m-d");
-            $command = "UPDATE usertable SET vac1_date='".$dtes_vac."' WHERE phnum_user=".$each_phnum_user ;
+            $date_vac = date("Y-m-d");
+            $command = "UPDATE usertable SET vac1_date='".$date_vac."' WHERE phnum_user=".$each_phnum_user ;
             $result = mysqli_query($conn, $command);
         }
         echo "All chosen users who applied for vaccination dose 1 are Updated !";
