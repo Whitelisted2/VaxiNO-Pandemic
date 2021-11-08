@@ -71,7 +71,10 @@ if(!isset($_POST['submit']))
             }
         }
     ?>
-    Click&nbsp;<a href='loggedin.php'>here</a>&nbsp;to go back to your dashboard
+    <br>
+    </div>
+    <div class="simple-box">
+    Click&nbsp;<a href='loggedin.php'>here</a>&nbsp;to go back to your dashboard.
     </div>
 </body>
 </html>
