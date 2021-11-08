@@ -15,7 +15,10 @@ if(isset($_SESSION["login_admin"]))
     session_start();
 }
 ?>
-
+<!-- 
+    just put a button with href="slots_aval.php"
+    it will take the user to a page which shall show all the vaccine centers around him/her
+ -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
