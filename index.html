@@ -41,6 +41,14 @@
                 <h1>Vaccine Doses Administered</h1>
                 <iframe src="https://ourworldindata.org/grapher/cumulative-covid-vaccinations?country=~IND" loading="lazy" style="width: 80%; height: 400px; border: 3px;"></iframe>
             </div>
+            <div class="new">
+                <h1 style="color:ivory">Find Vaccination Centres Near You!</h1>
+                <div class="map-in" id="nearby-covid-places-mapmyindia"></div>
+                <script type="text/javascript">
+                    loadNearbyCovidCentresMapmyIndiaDiv(document.getElementById("nearby-covid-places-mapmyindia"));
+                </script>
+            </div>
+
             <!--BOTTOM CONTAINER (FOOTER)-->
             <div class="container" style="background-color:rgb(0, 60, 128); display:block;">
                 <h1>Our Team</h1>
@@ -69,13 +77,7 @@
                 </div>
             </div>
             
-            <div class="new">
-                <h1 style="color:ivory">Find Vaccination Centres Near You!</h1>
-                <div class="map-in" id="nearby-covid-places-mapmyindia"></div>
-                <script type="text/javascript">
-                    loadNearbyCovidCentresMapmyIndiaDiv(document.getElementById("nearby-covid-places-mapmyindia"));
-                </script>
-            </div>
+            
 
             <footer>
                 <p>&copy;2021 VaxiNO'Pandemic (A step towards faster vaccination)</p>
