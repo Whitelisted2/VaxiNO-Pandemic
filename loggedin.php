@@ -39,7 +39,7 @@ if(isset($_SESSION["login_admin"]))
                 font-family: 'Roboto', sans-serif;
                 color:ivory;
             }
-            body{
+            body, pre{
                 font-family: 'Nunito', sans-serif;
             }
             
@@ -55,8 +55,6 @@ if(isset($_SESSION["login_admin"]))
             <div class="cloumn-flexing">
                 <span><a class="nav-list"><b>User Dashboard</b></a></span> &emsp;&emsp;&emsp;&emsp;
                 <span><a class="nav-list" href="index.html">Home</a></span>
-                <span><a class="nav-list" href="team_members.html">Members</a></span>
-                <span><a class="nav-list" href="proj_overview.html">Overview</a></span>
                 <span><a class="nav-list" href="awareness.html">Awareness</a></span>
                 <span><a class="nav-list" href="update_stat.php">Statistics</a></span>
             </div>
@@ -153,10 +151,12 @@ if(isset($_SESSION["login_admin"]))
             <?php
             if(($_SESSION["app1_approval_user"] == 1) && ($_SESSION["vac1_approval_user"] == 0) )
             {
+                echo "<pre> You can now get vaccinated as per the slots available:</pre>";
                 echo "<a href='slots_aval.php'><button>View Slots</button></a>";
             }
             else if(($_SESSION["app2_approval_user"] == 1) && ($_SESSION["vac2_approval_user"] == 0) )
             {
+                echo "<pre> You can now get vaccinated as per the slots available:</pre>";
                 echo "<a href='slots_aval.php'><button>View Slots</button></a>";
             }
             else if((($_SESSION["vac1_approval_user"] == 1) && ($_SESSION["app2_approval_user"] == 0))||($_SESSION["app1_approval_user"] == 0))
