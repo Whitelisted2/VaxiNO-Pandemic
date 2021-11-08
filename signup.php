@@ -69,7 +69,9 @@
             app1_approval_user INT(3) DEFAULT '0', 
             vac1_approval_user INT(3) DEFAULT '0', 
             app2_approval_user INT(3) DEFAULT '0', 
-            vac2_approval_user INT(3) DEFAULT '0')";
+            vac2_approval_user INT(3) DEFAULT '0', 
+            vac1_date DATE DEFAULT 0001-01-01, 
+            vac2_date DATE DEFAULT 0001-01-01)";
         
         $result = mysqli_query($conn, $command);
         if(!$result){

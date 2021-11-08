@@ -72,6 +72,30 @@ if(isset($_SESSION["login_admin"]))
     </style>
 </head>
 <body>
+    <?php
+    $servername = $_SERVER['SERVER_NAME'];
+    $username="root";
+    $password="";
+
+    $conn=mysqli_connect($servername, $username, $password);
+    if(!$conn){
+        die("Connection Failed !"+mysqli_connect_error()+"<br/>");
+    }
+
+    $command="CREATE DATABASE IF NOT EXISTS allusers";
+    $result=mysqli_query($conn, $command);
+    if(!$result)
+    {
+        die("Database allusers NOT created ! error : ".mysqli_error($conn)."<br/>");
+    }
+
+    $command = "use allusers";
+    $result = mysqli_query($conn, $command);
+
+    $command = "SELECT * FROM usertable WHERE phnum_user='$phnum_user'";
+    $result = mysqli_query($conn, $command);
+    $row = mysqli_fetch_assoc($result);
+    ?>
     <div class="logo">
         <img src="images/light_logo.png" width="50%">
     </div>
@@ -92,6 +116,7 @@ if(isset($_SESSION["login_admin"]))
                 <tr><td>Phone No. </td><td>:</td><td> <?php echo $_SESSION["phnum_user"]; ?></td></tr>
                 <tr><td>Pincode </td><td>:</td><td> <?php echo $_SESSION["pincode_users"]; ?></td></tr>
                 <tr><td>Email </td><td>:</td><td> <?php echo $_SESSION["email_user"]; ?></td></tr>
+                <tr><td>Date of Vaccination dose 1 </td><td>:</td><td> <?php echo $row['vac1_date'] ; ?></td></tr>
             </table>
         </div>
         <div class="right">
@@ -107,6 +132,7 @@ if(isset($_SESSION["login_admin"]))
         <div class="right" style="margin-bottom:0; margin-right:2%;">
             <p style="text-align: right;">
             <b><em> VaxiNO'Pandemic </em></b><br/>
+            Verified on : <?php echo $row['vac1_date'] ; ?>
             </p>
         </div>
     </div>
