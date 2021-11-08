@@ -8,12 +8,12 @@ pincode = sys.argv[1]
 date_set = str(dt.now().day)+"-"+str(dt.now().month)+"-"+str(dt.now().year)
 response = req.get("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode="+pincode+"&date="+date_set)
 
-new_var = response.json()
+all_centers = response.json()
 
-new_var = new_var["centers"]
-print("total centers available around you : "+str(len(new_var))+"<br/><br/>")
+all_centers = all_centers["centers"]
+print("total centers available around you : "+str(len(all_centers))+"<br/><br/>")
 print("List of all Center Names Around you :-<br/>")
-for each_center in new_var:
+for each_center in all_centers:
     print("center name : "+str(each_center['name'])+"<br/>")
     print("center address : "+str(each_center['address'])+", "+str(each_center['block_name'])+"<br/>")
     print("Timings for center open : "+str(each_center['from'])+"-"+str(each_center['to']))
