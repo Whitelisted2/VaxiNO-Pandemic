@@ -1,20 +1,6 @@
 
 ![Logo Image](/images/light_logo.png)
 
-## Technologies used:
-This project has been created and maintained using the following tools:
-- VSCode: as an IDE
-- Chrome: as a Browser
-- LaTeX: for Reports
-- HTML/CSS: for Layout and Appearance
-- Javascript: to make ```onClick()``` tools
-- PHP/mySQL: as a DBMS
-- Git/GitHub: for Collaboration and Version Control
-- Python/Shell: in Generation of Graphs from data
-
-Link to the GitHub Webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ (does not run features related to PHP/Databases)
-
-
 ## Instructions for Setup and Installation
 - XAMPP
   - Install XAMPP on your PC. To download it, click [here](https://www.apachefriends.org/download.html).
@@ -27,3 +13,17 @@ Link to the GitHub Webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ (doe
   - Download the latest version of Python from [here](https://www.python.org/downloads/).
   - Using PIP, install the libraries ```matplotlib``` and ```requests```.
   - (For the program to be able to connect to the Online API, make sure that the system is connected to the Internet throughout.)
+
+
+## Technologies used:
+This project has been created and maintained using the following tools:
+- VSCode: as an IDE
+- Chrome: as a Browser
+- LaTeX: for Reports
+- HTML/CSS: for Layout and Appearance
+- Javascript: to make ```onClick()``` tools
+- PHP/mySQL: as a DBMS
+- Git/GitHub: for Collaboration and Version Control
+- Python/Shell: in Generation of Graphs from data
+
+Link to the GitHub Webpage: https://whitelisted2.github.io/VaxiNO-Pandemic/ (does not run features related to PHP/Databases)
