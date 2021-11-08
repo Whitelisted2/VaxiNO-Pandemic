@@ -92,7 +92,7 @@ if(isset($_SESSION["login_admin"]))
     $command = "use allusers";
     $result = mysqli_query($conn, $command);
 
-    $command = "SELECT * FROM usertable WHERE phnum_user='$phnum_user'";
+    $command = "SELECT * FROM usertable WHERE phnum_user='$_SESSION['phnum_user']'";
     $result = mysqli_query($conn, $command);
     $row = mysqli_fetch_assoc($result);
     ?>
