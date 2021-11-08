@@ -54,7 +54,7 @@
             $command = "UPDATE usertable SET vac1_approval_user=1 WHERE phnum_user=".$each_phnum_user ;
             $result = mysqli_query($conn, $command);
         }
-        echo "All users who applied for vaccination dose 1 are Updated !";
+        echo "All chosen users who applied for vaccination dose 1 are Updated !";
     ?>
     Click&nbsp;<a href='admin_loggedin.php'>here</a>&nbsp;to go back to admin dashboard.
     </div>
