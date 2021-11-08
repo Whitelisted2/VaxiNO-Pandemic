@@ -86,7 +86,7 @@
             die("This Phone number is already registered. &nbsp;<a href='user_login_signup.html'>Try again</a>,&nbsp;!");
         }
 
-        $command = "INSERT INTO usertable values ('$name_user', '$age', '$phnum_user', '$password_user', '$email_user', '$pincode_user', 0, 0, 0, 0)";
+        $command = "INSERT INTO usertable values ('$name_user', '$age', '$phnum_user', '$password_user', '$email_user', '$pincode_user', 0, 0, 0, 0, 0001-01-01, 0001-01-01)";
         $result = mysqli_query($conn, $command);
         if(!$result){
             die("Record Not added ! &nbsp;<a href='user_login_signup.html'>try again</a>,&nbsp; error : ".mysqli_error($conn));
