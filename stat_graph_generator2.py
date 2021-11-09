@@ -24,7 +24,7 @@ plt.clf()
 
 plt.plot(list_for_plot3)
 plt.xlabel("No. of days since Jan. 22 2020")
-plt.ylabel("No. of Deaths Daily Daily")
+plt.ylabel("No. of Deaths Daily")
 plt.ticklabel_format(style = 'plain')
 plt.tight_layout()
 plt.savefig('stat3.jpeg')
